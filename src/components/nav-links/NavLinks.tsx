@@ -2,12 +2,13 @@ import React from "react";
 import navItem from "../../utils/interfaces/navItem";
 
 type navLinksProps = {
-  navItems: navItem[];
+  navItems: navItem[],
+  styleClassNames: string
 };
 
-const NavLinks: React.FC<navLinksProps> = ({ navItems }: navLinksProps) => {
+const NavLinks: React.FC<navLinksProps> = ({ navItems, styleClassNames }: navLinksProps) => {
   return (
-    <ul>
+    <ul className={styleClassNames}>
       {navItems.map((navItem) => (
         <li>
           <a href={navItem.route}>
