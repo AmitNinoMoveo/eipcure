@@ -1,21 +1,33 @@
-import React from 'react'
-
+import React from "react";
+import magnifyingGlassIcon from '../../assets/images/icons/magnifying-glass.svg';
 type Props = {
-    placeholderTxt: string,
-    valueState: string,
-    onChangeFunc: ()=>void
+  type: "icon" | "field";
+  placeholderTxt: string;
+  valueState: string;
+  onChangeFunc: () => void;
 };
 
-const Search = (props: Props) => {
-
-    const { onChangeFunc, placeholderTxt, valueState } = props;
-
-    return (
-        <div className="search-container">
-            <span>{ placeholderTxt }</span>
-            <input onChange={()=>onChangeFunc()} value={valueState} type="text" />
-        </div>
-    );
+const Search = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => {
+  return (
+    <div className={`search-container-${type}`}>
+      <img
+        src={magnifyingGlassIcon}
+        alt="magnifying-glass"
+      />
+      {type === "icon" ? (
+        <></>
+      ) : (
+        <>
+          <p>{placeholderTxt}</p>
+          <input
+            onChange={() => onChangeFunc()}
+            value={valueState}
+            type="text"
+          />
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Search;

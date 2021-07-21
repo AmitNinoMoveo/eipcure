@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <NavLinks navItems={mockNavMainItems}/>
       </nav>
       <div className="company-logos"></div>
-      <Search onChangeFunc={()=>{}} valueState={''} placeholderTxt={''} />
+      <Search onChangeFunc={()=>{}} valueState={''} placeholderTxt={''} type={"field"}/>
       <nav className="nav-user">
         <NavLinks navItems={mockNavUserItems}/>
       </nav>
