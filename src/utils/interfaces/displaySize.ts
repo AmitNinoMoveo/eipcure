@@ -1,2 +1,4 @@
-type displaySize = 'mobile' | 'tablet' | 'web';
+type displaySize = {
+    displaySize: 'mobile' | 'tablet' | 'web'
+};
 export default displaySize;
