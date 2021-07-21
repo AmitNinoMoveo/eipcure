@@ -1,6 +1,6 @@
 interface navItem {
     name?: string,
-    icon?: string | Element, 
+    icon?: string, 
     route: string
 };
 export default navItem;
