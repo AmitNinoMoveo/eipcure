@@ -14,6 +14,6 @@ const displaySizeSlice = createSlice({
     }
 });
 
-const { actions, reducer } = displaySizeSlice
-export const { setDisplaySizeState } = actions;
-export default reducer;
+const displaySizeReducer = displaySizeSlice.reducer
+export const { setDisplaySizeState } = displaySizeSlice.actions;
+export default displaySizeReducer;
