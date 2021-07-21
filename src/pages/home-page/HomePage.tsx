@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
     return (
-        <main>
+        <main className='w-all'>
             
         </main>
     )
