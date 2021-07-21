@@ -1,0 +1,20 @@
+@import './variables';
+/* Media queries Breakpoint mixins */
+
+@mixin for-desktop-layout {
+  @media (min-width: $break-desktop) {
+    @content;
+  }
+}
+
+@mixin for-tablet-layout {
+  @media (max-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-normal) {
+    @content;
+  }
+}
