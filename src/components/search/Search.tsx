@@ -18,10 +18,10 @@ const Search = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => {
         <></>
       ) : (
         <>
-          <p>{placeholderTxt}</p>
           <input
             onChange={() => onChangeFunc()}
             value={valueState}
+            placeholder={placeholderTxt}
             type="text"
           />
         </>
