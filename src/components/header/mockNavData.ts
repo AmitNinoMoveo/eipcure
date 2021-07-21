@@ -1,4 +1,5 @@
-import { navItem } from "../../utils/interfaces/navItem";
+import navItem from "../../utils/interfaces/navItem";
+
 
 export const mockNavUserItems: navItem[] = [
     {

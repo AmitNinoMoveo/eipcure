@@ -1,5 +1,5 @@
 import React from "react";
-import { navItem } from "../../utils/interfaces/navItem";
+import navItem from "../../utils/interfaces/navItem";
 
 type navLinksProps = {
     navItems: navItem[]
