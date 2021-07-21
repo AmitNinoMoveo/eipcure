@@ -1,17 +1,21 @@
-import React from 'react'
+import React from "react";
+import NavLinks from "../nav-links/NavLinks";
+import Search from "../search/Search";
+import { mockNavMainItems, mockNavUserItems } from "./mockNavData";
 
-type Props = {
-    
-}
+const Header: React.FC = () => {
+  return (
+    <header>
+      <nav className="nav-main-menu">
+        <NavLinks navItems={mockNavMainItems}/>
+      </nav>
+      <div className="company-logos"></div>
+      <Search onChangeFunc={()=>{}} valueState={''} placeholderTxt={''} />
+      <nav className="nav-user">
+        <NavLinks navItems={mockNavUserItems}/>
+      </nav>
+    </header>
+  );
+};
 
-const Header: React.FC<Props> = ({children}) => {
-    return (
-        <header>
-            <div className="menu"></div>
-            <div className="company-logos"></div>
-            <nav>{children}</nav>
-        </header>
-    )
-}
-
-export default Header
+export default Header;
