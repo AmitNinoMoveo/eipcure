@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import displaySizeReducer from "./displaySizeReducer";
+import generalUISettingsReducer from "./generalUISettings";
 
 const rootReducer = combineReducers({
-    displaySize: displaySizeReducer,
+    generalUISettings: generalUISettingsReducer,
     
 });
 
