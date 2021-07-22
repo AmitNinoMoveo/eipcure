@@ -7,27 +7,19 @@ type Props = {
   onChangeFunc: () => void;
 };
 
-const Search = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => {
-  return (
-    <div className={`search-container-${type}`}>
-      <img
-        src={magnifyingGlassIcon}
-        alt="magnifying-glass"
-      />
-      {type === "icon" ? (
-        <></>
-      ) : (
-        <>
-          <input
-            onChange={() => onChangeFunc()}
-            value={valueState}
-            placeholder={placeholderTxt}
-            type="text"
-          />
-        </>
-      )}
-    </div>
-  );
-};
+const Search = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => (
+  <div className={`search-container-${type}`}>
+    <img
+      src={magnifyingGlassIcon}
+      alt="magnifying-glass" />
+    {type !== "icon" && (
+      <input
+        onChange={() => onChangeFunc()}
+        value={valueState}
+        placeholder={placeholderTxt}
+        type="text" />
+    )}
+  </div>
+);
 
 export default Search;
