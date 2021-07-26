@@ -10,8 +10,8 @@ type navLinksProps = {
 const NavLinks: React.FC<navLinksProps> = ({ navItems, styleClassNames }: navLinksProps) => {
   return (
     <ul className={styleClassNames}>
-      {navItems.map((navItem) => (
-        <li>
+      {navItems.map((navItem, i) => (
+        <li key={i}>
           <Link to={navItem.route}>
             {navItem.name ? (
               navItem.name

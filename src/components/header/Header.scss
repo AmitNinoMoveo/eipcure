@@ -1,17 +1,19 @@
-@import "../../assets/global-style/default-styles.scss";
+header{
+    padding: .5rem 2rem;
+    position: relative;
 
-.header-container {
-    height: $header-mobile-h;
-    padding: 5px 30px;
-
-    .nav-main {
-        width: 60%;
-        .main-company-logo > img {
-            width: 40px;
-        }
+    #dishes-icon{
+        height: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    .nav-user-search {
-        width: 35%;
+    ul{
+        margin: 0;
+        li{
+            margin: 0 1rem;
+        }
     }
 }
