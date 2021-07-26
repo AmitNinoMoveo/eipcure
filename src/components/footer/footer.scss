@@ -1,5 +1,21 @@
-@import '../../assets/global-style/default-styles.scss';
+@import "../../assets/global-style/default-styles.scss";
 
-footer{
-    height: $footer-h;
+footer {
+  height: $footer-h;
+  padding: 1rem;
+  width: 100%;
+  @include flexCenter();
+  align-items: stretch;
+
+  ul {
+    width: 100%;
+    @include flexCenter();
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    li {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+  }
 }

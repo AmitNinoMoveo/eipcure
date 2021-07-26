@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import NavigationComponent from "./navigation/navigation";
+import NavigationComponent from "./navigation/Navigation";
 
 function App() {
   return (
