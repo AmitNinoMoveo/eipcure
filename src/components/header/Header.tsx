@@ -17,29 +17,27 @@ const Header: React.FC = () => {
   );
 
   return (
-    <header className="w-all">
-      <nav className="flex space-between align-center w-all">
-        <div className="flex center align-center">
+    <header>
+      <nav>
+        <div className="nav-left">
           {generalUISettingsState === "mobile" ? (
             <img src={MenuIcon} alt="menu-icon" />
           ) : (
             <NavLinks
               navItems={mockNavMainItems}
-              styleClassNames={""}
             />
           )}
         </div>
         <img id="dishes-icon" src={DishesIcon} alt="dishes-icon" />
-        <div className="flex flex-end align-center">
+        <div className="nav-right">
           <Search
             onChangeFunc={() => {}}
-            valueState={""}
+            valueState=""
             placeholderTxt={"Search"}
             type={"icon"}
           />
           <NavLinks
             navItems={mockNavUserItems}
-            styleClassNames={"flex flex-end align-center"}
           />
         </div>
       </nav>

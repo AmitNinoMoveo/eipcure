@@ -4,7 +4,7 @@ import NavigationComponent from "./navigation/navigation";
 
 function App() {
   return (
-    <div className="App flex column flex-start w-all">
+    <div className="App">
       <NavigationComponent />
     </div>
   );

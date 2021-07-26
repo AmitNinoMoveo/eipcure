@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import navItem from "../../../utils/interfaces/navItem";
 
 type navLinksProps = {
-  navItems: navItem[],
-  styleClassNames: string
+  navItems: navItem[]
 };
 
-const NavLinks: React.FC<navLinksProps> = ({ navItems, styleClassNames }: navLinksProps) => {
+const NavLinks: React.FC<navLinksProps> = ({ navItems }: navLinksProps) => {
   return (
-    <ul className={styleClassNames}>
+    <ul>
       {navItems.map((navItem, i) => (
         <li key={i}>
           <Link to={navItem.route}>

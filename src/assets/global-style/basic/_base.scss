@@ -10,8 +10,7 @@ html {
 }
 
 main {
-  height: calc(100vh - clac($header-mobile-h+$footer-mobile-h));
-  width: calc(1440px - 22rem);
+  height: calc(100vh - calc($header-mobile-h+$footer-mobile-h));
 }
 
 body {

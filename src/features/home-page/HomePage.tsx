@@ -1,9 +1,10 @@
 import React from 'react';
+import './HomePage.scss';
 import HeroComponent from '../../components/home-page/Hero';
 
 const HomePageComponent = () => {
     return (
-        <main className='w-all flex column justify-start'>
+        <main>
             <HeroComponent />
         </main>
     )

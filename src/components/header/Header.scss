@@ -1,17 +1,44 @@
+@import '../../assets/global-style/default-styles.scss';
+
 header{
+    height: $header-h;
+    width: 100% ;
+
+    @include flexCenter();
+
     padding: .5rem 2rem;
     position: relative;
 
     #dishes-icon{
-        height: 3rem;
+        height: 4.5rem;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
+    nav{
+        width: 100%;
+
+        @include flexCenter();
+        justify-content:space-between;
+        
+        .nav-left{
+            @include flexCenter();
+            justify-content: flex-start;       
+            flex-grow: 1;
+        }
+        .nav-right{
+            @include flexCenter();
+            flex-grow: 1;
+            justify-content: flex-end;       
+        }
+    }
+    
     ul{
         margin: 0;
+        @include flexCenter();
+        
         li{
             margin: 0 1rem;
         }
