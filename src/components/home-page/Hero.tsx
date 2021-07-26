@@ -3,8 +3,7 @@ import "./hero.scss";
 import HeroBackgroundImg from "../../assets/images/pictures/hero-background.png";
 import Search from "../general/search/Search";
 
-const HeroComponent = () => {
-  return (
+const HeroComponent = () => (
     <section
       style={{ backgroundImage: `url(${HeroBackgroundImg})` }}
       className="flex justify-center align-stretch"
@@ -14,12 +13,11 @@ const HeroComponent = () => {
         <Search
           onChangeFunc={() => {}}
           placeholderTxt={"Search for restaurant cuisine, chef"}
-          valueState={""}
+          valueState=""
           type="field"
         />
       </div>
     </section>
   );
-};
 
 export default HeroComponent;
