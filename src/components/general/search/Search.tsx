@@ -1,5 +1,5 @@
-import React from "react";
-import magnifyingGlassIcon from '../../assets/images/icons/magnifying-glass.svg';
+import React, { FC } from "react";
+import magnifyingGlassIcon from '../../../assets/images/icons/magnifying-glass.svg';
 type Props = {
   type: "icon" | "field";
   placeholderTxt: string;
@@ -7,7 +7,7 @@ type Props = {
   onChangeFunc: () => void;
 };
 
-const Search = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => (
+const Search: FC<Props> = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => (
   <div className={`search-container-${type}`}>
     <img
       src={magnifyingGlassIcon}

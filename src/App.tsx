@@ -7,9 +7,9 @@ import HomePage from "./features/home-page/HomePage";
 function App() {
   return (
     <div className="App flex column flex-start w-all">
-      <Header />
       <BrowserRouter>
         <Switch>
+          <Header />
           <Route path="/">
             <HomePage />
           </Route>
