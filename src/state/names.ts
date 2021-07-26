@@ -1,4 +1,4 @@
 export enum SliceNames {
-    DISPLAY_SIZE = 'DISPLAY_SIZE',
+    GENERAL_UI_SETTINGS = 'GENERAL_UI_SETTINGS',
     
 }

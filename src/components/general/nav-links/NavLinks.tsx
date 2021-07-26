@@ -1,5 +1,6 @@
 import React from "react";
-import navItem from "../../utils/interfaces/navItem";
+import { Link } from "react-router-dom";
+import navItem from "../../../utils/interfaces/navItem";
 
 type navLinksProps = {
   navItems: navItem[],
@@ -11,7 +12,7 @@ const NavLinks: React.FC<navLinksProps> = ({ navItems, styleClassNames }: navLin
     <ul className={styleClassNames}>
       {navItems.map((navItem) => (
         <li>
-          <a href={navItem.route}>
+          <Link to={navItem.route}>
             {navItem.name ? (
               navItem.name
             ) : navItem.icon ? (
@@ -19,7 +20,7 @@ const NavLinks: React.FC<navLinksProps> = ({ navItems, styleClassNames }: navLin
             ) : (
               navItem.route
             )}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

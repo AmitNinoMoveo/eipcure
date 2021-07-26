@@ -1,13 +1,20 @@
-import React from 'react';
-import './App.scss';
-import Header from './components/header/Header';
-import HomePage from './pages/home-page/HomePage';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.scss";
+import Header from "./components/header/Header";
+import HomePage from "./features/home-page/HomePage";
 
 function App() {
   return (
     <div className="App flex column flex-start w-all">
-      <Header />
-      <HomePage />
+      <BrowserRouter>
+        <Switch>
+          <Header />
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
       {/* <Footer /> */}
     </div>
   );
