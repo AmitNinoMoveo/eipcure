@@ -1,5 +1,7 @@
 import React, { FC } from "react";
-import magnifyingGlassIcon from '../../../assets/images/icons/magnifying-glass.svg';
+import "./Search.scss";
+import magnifyingGlassIcon from "../../../assets/images/icons/magnifying-glass.svg";
+
 type Props = {
   type: "icon" | "field";
   placeholderTxt: string;
@@ -7,18 +9,38 @@ type Props = {
   onChangeFunc: () => void;
 };
 
-const Search: FC<Props> = ({ onChangeFunc, placeholderTxt, valueState, type }: Props) => (
-  <div className={`search-container-${type}`}>
-    <img
-      src={magnifyingGlassIcon}
-      alt="magnifying-glass" />
+const SearchBar: FC<Props> = ({
+  onChangeFunc,
+  placeholderTxt,
+  valueState,
+  type,
+}: Props) => (
+  <>
     {type !== "icon" && (
       <input
         onChange={() => onChangeFunc()}
         value={valueState}
         placeholder={placeholderTxt}
-        type="text" />
+        type="text"
+      />
     )}
+  </>
+);
+
+const Search: FC<Props> = ({
+  onChangeFunc,
+  placeholderTxt,
+  valueState,
+  type,
+}: Props) => (
+  <div className={`search-container-${type}`}>
+    <img src={magnifyingGlassIcon} alt="magnifying-glass" />
+    <SearchBar
+      onChangeFunc={onChangeFunc}
+      placeholderTxt={placeholderTxt}
+      valueState={valueState}
+      type={type}
+    />
   </div>
 );
 
