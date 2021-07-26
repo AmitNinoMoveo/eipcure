@@ -1,0 +1,17 @@
+@import "../../assets/global-style/default-styles.scss";
+
+.header-container {
+    height: $header-mobile-h;
+    padding: 5px 30px;
+
+    .nav-main {
+        width: 60%;
+        .main-company-logo > img {
+            width: 40px;
+        }
+    }
+
+    .nav-user-search {
+        width: 35%;
+    }
+}
