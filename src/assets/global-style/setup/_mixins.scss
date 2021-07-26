@@ -1,6 +1,13 @@
 @import './_variables.scss';
 /* Media queries Breakpoint mixins */
 
+@mixin flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @mixin for-desktop-layout {
   @media (min-width: $break-desktop) {
     @content;

@@ -33,7 +33,7 @@ const Search: FC<Props> = ({
   valueState,
   type,
 }: Props) => (
-  <div className={`search-container-${type}`}>
+  <div className={`search-container ${type} flex space-around align-center`}>
     <img src={magnifyingGlassIcon} alt="magnifying-glass" />
     <SearchBar
       onChangeFunc={onChangeFunc}

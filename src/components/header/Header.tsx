@@ -8,7 +8,7 @@ import { RootState } from "../../state/store";
 import {
   mockNavMainItems,
   mockNavUserItems,
-} from "../../utils/constants/mockNavData";
+} from "../../utils/constants/mockData/mockNavData";
 import Search from "../general/search/Search";
 
 const Header: React.FC = () => {
@@ -17,33 +17,29 @@ const Header: React.FC = () => {
   );
 
   return (
-    <header className="header-container flex row space-between align-center w-all">
-      <nav className="nav-main flex space-between align-center">
-        <div className="main-links">
+    <header>
+      <nav>
+        <div className="nav-left">
           {generalUISettingsState === "mobile" ? (
             <img src={MenuIcon} alt="menu-icon" />
           ) : (
             <NavLinks
               navItems={mockNavMainItems}
-              styleClassNames={"flex row flex space-around align-center w-all"}
             />
           )}
         </div>
-        <div className="main-company-logo">
-          <img src={DishesIcon} alt="dishes-icon" />
+        <img id="dishes-icon" src={DishesIcon} alt="dishes-icon" />
+        <div className="nav-right">
+          <Search
+            onChangeFunc={() => {}}
+            valueState=""
+            placeholderTxt={"Search"}
+            type={"icon"}
+          />
+          <NavLinks
+            navItems={mockNavUserItems}
+          />
         </div>
-      </nav>
-      <nav className="nav-user-search flex space-around align-center">
-        <Search
-          onChangeFunc={() => {}}
-          valueState={""}
-          placeholderTxt={"Search"}
-          type={"icon"}
-        />
-        <NavLinks
-          navItems={mockNavUserItems}
-          styleClassNames={"flex row flex space-evenly w-all"}
-        />
       </nav>
     </header>
   );

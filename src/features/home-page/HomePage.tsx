@@ -1,12 +1,13 @@
 import React from 'react';
+import './HomePage.scss';
 import HeroComponent from '../../components/home-page/Hero';
 
-const HomePage = () => {
+const HomePageComponent = () => {
     return (
-        <main className='w-all flex column justify-start'>
+        <main>
             <HeroComponent />
         </main>
     )
 }
 
-export default HomePage
+export default HomePageComponent;
