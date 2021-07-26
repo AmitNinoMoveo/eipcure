@@ -1,16 +1,25 @@
-import React from 'react'
-import Search from '../general/search/Search';
+import React from "react";
+import "./hero.scss";
+import HeroBackgroundImg from "../../assets/images/pictures/hero-background.png";
+import Search from "../general/search/Search";
 
 const HeroComponent = () => {
-    return (
-        <section className="hero-container w-all flex justify-center align-center">
-            <div className="hero-box-container">
-                <h1></h1>
-                <Search onChangeFunc={()=>{}} placeholderTxt={"Restaurants, Chefs, Meals"} valueState={""} type="field" />
-            </div>
-        </section >
-    )
-}
-
+  return (
+    <section
+      style={{ backgroundImage: `url(${HeroBackgroundImg})` }}
+      className="flex justify-center align-stretch"
+    >
+      <div className="hero-box-container flex justify-center align-center column">
+        <h1>Epicure works with the top chef restaurants in Tel Aviv</h1>
+        <Search
+          onChangeFunc={() => {}}
+          placeholderTxt={"Search for restaurant cuisine, chef"}
+          valueState={""}
+          type="field"
+        />
+      </div>
+    </section>
+  );
+};
 
 export default HeroComponent;
