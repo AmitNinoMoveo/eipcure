@@ -1,0 +1,14 @@
+@import '../../global-style/styles.scss';
+
+.chef-week-container{
+    @include flexCenter();
+    flex-direction: column;
+
+    h3{
+
+    }
+
+    .chef-portrait{
+        
+    }
+}
