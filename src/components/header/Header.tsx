@@ -8,7 +8,7 @@ import { RootState } from "../../state/store";
 import {
   mockNavMainItems,
   mockNavUserItems,
-} from "../../utils/constants/mockData/mockNavData";
+} from "../../utils/constants/navData";
 import Search from "../general/search/Search";
 
 const Header: React.FC = () => {

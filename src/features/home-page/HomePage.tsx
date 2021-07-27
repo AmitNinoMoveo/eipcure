@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "../../assets/styles/layout/home-page.scss";
 import HeroComponent from "../../components/home-page/Hero";
+import IconDictionaryComponent from "../../components/home-page/IconDictionary";
 import MobileNavComponent from "../../components/home-page/MobileNav";
 import { RootState } from "../../state/store";
 
@@ -17,6 +18,7 @@ const HomePageComponent = () => {
     <main>
       <HeroComponent />
       <MobileNav />
+      <IconDictionaryComponent />
     </main>
   );
 };
