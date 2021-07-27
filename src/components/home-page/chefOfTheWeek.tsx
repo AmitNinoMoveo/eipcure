@@ -27,7 +27,7 @@ const ChefOfTheWeekComponent = () => {
 
   return (
     <section className="chef-week-container">
-      <h3>chef of the week:</h3>
+      <h3 className="text-uppercase" >chef of the week:</h3>
       <ChefPortrait />
       <p>{chef.description}</p>
       <h3>{chef.chefName}'s restaurants:</h3>

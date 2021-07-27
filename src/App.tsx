@@ -1,7 +1,7 @@
 
 import "./assets/styles/layout/app.scss";
 import React, { useEffect } from "react";
-import NavigationComponent from "./navigation/Navigation";
+import NavigationComponent from "./navigation/navigation";
 import { setChefWeek } from "./state/reducers/dataReducer";
 import { useDispatch } from "react-redux";
 import mockChefWeekData from "./utils/constants/mockData/mockChefWeekData";
