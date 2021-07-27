@@ -1,6 +1,6 @@
 import '../../assets/styles/components/home-page/nav-mobile.scss';
 import React from 'react'
-import { mockHomePageMobileNavItems } from '../../utils/constants/mockData/mockNavData';
+import { mockHomePageMobileNavItems } from '../../utils/constants/navData';
 import NavLinks from '../general/nav-links/NavLinks';
 
 const MobileNavComponent = () => {
