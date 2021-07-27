@@ -1,6 +1,6 @@
 @import '../../global-style/styles.scss';
 
-section{
+.home-hero-container{
     height: 27rem;
     padding: 7rem 2rem;
 
@@ -20,7 +20,7 @@ section{
 
         h1{
             width: 70%;
-            font-size: 1.6rem;
+            font-size: $font-medium-size;
             line-height: 1.6;
             text-align: center;
             color: black;

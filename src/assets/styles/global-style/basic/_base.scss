@@ -9,12 +9,17 @@ html {
   font-size: 62.5%;  // 16px / 10px = 62.5%
 }
 
-main {
-  height: calc(100vh - calc($header-mobile-h+$footer-mobile-h));
-}
-
 body {
   margin: 0;
+}
+
+main {
+  height: calc(100vh - calc(#{$header-h} + #{$footer-h}));
+  overflow-y: auto;
+}
+
+section{
+  width: 100%;
 }
 
 p,

@@ -5,7 +5,8 @@ import Search from "../general/search/Search";
 
 const HeroComponent = () => (
     <section
-      style={{ backgroundImage: `url(${HeroBackgroundImg})` }}
+      style={{ backgroundImage: `url(${HeroBackgroundImg})`}}
+      className='home-hero-container'
     >
       <div className="hero-box-container">
         <h1>Epicure works with the top chef restaurants in Tel Aviv</h1>
