@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import navItem from "../../../utils/interfaces/navItem";
+import navItem from "../../utils/interfaces/navItem";
 
 type navLinksProps = {
   navItems: navItem[]

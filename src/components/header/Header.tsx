@@ -2,14 +2,14 @@ import "../../assets/styles/components/header.scss";
 import React from "react";
 import MenuIcon from "../../assets/images/icons/menu-logo.svg";
 import DishesIcon from "../../assets/images/icons/dishes-icon.png";
-import NavLinks from "../general/nav-links/NavLinks";
+import NavLinks from "../general/NavLinks";
 import { useAppSelector } from "../../state/hooks";
 import { RootState } from "../../state/store";
 import {
   mockNavMainItems,
   mockNavUserItems,
 } from "../../utils/constants/navData";
-import Search from "../general/search/Search";
+import Search from "../general/Search";
 
 const Header: React.FC = () => {
   const generalUISettingsState = useAppSelector(

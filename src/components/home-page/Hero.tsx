@@ -1,7 +1,7 @@
 import "../../assets/styles/components/home-page/hero.scss";
 import React from "react";
 import HeroBackgroundImg from "../../assets/images/pictures/hero-background.png";
-import Search from "../general/search/Search";
+import Search from "../general/Search";
 
 const HeroComponent = () => (
     <section

@@ -1,6 +1,6 @@
-import "../../../assets/styles/components/search.scss";
+import "../../assets/styles/components/search.scss";
 import React, { FC } from "react";
-import magnifyingGlassIcon from "../../../assets/images/icons/magnifying-glass.svg";
+import magnifyingGlassIcon from "../../assets/images/icons/magnifying-glass.svg";
 
 type Props = {
   type: "icon" | "field";
