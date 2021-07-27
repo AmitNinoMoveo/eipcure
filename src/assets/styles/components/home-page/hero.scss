@@ -1,11 +1,10 @@
-@import '../../assets/global-style/default-styles.scss';
+@import '../../global-style/styles.scss';
 
 section{
     height: 27rem;
     padding: 7rem 2rem;
 
-    @include flexCenter();
-    align-items: stretch;
+    @include flexCenterAlignStretch();
 
     background-position: center;
     background-size: cover;

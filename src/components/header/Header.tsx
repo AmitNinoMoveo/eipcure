@@ -1,5 +1,5 @@
+import "../../assets/styles/components/header.scss";
 import React from "react";
-import "./Header.scss";
 import MenuIcon from "../../assets/images/icons/menu-logo.svg";
 import DishesIcon from "../../assets/images/icons/dishes-icon.png";
 import NavLinks from "../general/nav-links/NavLinks";

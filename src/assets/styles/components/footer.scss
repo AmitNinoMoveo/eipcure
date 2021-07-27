@@ -1,15 +1,15 @@
-@import "../../assets/global-style/default-styles.scss";
+@import '../global-style/styles.scss';
 
 footer {
   height: $footer-h;
   padding: 1rem;
   width: 100%;
-  @include flexCenter();
+  @include flexCenterAlignStretch();
   align-items: stretch;
 
   ul {
     width: 100%;
-    @include flexCenter();
+    @include flexWrap();
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;

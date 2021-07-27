@@ -1,4 +1,4 @@
-@import '../../assets/global-style/default-styles.scss';
+@import '../global-style/styles.scss';
 
 header{
     height: $header-h;
@@ -20,18 +20,18 @@ header{
     nav{
         width: 100%;
 
-        @include flexCenter();
+        @include flexAlignCenter();
         justify-content:space-between;
         
         .nav-left{
-            @include flexCenter();
+            @include flexAlignCenter();
             justify-content: flex-start;       
             flex-grow: 1;
         }
         .nav-right{
-            @include flexCenter();
-            flex-grow: 1;
+            @include flexAlignCenter();
             justify-content: flex-end;       
+            flex-grow: 1;
         }
     }
     
