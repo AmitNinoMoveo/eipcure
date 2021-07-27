@@ -1,6 +1,3 @@
-@import './_variables.scss';
-/* Media queries Breakpoint mixins */
-
 @mixin flexCenter{
   display: flex;
   justify-content: center;
@@ -8,6 +5,25 @@
   flex-wrap: wrap;
 }
 
+@mixin flexCenterAlignStretch{
+  display:flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+@mixin flexAlignCenter{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flexWrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Media queries Breakpoint mixins */
 @mixin for-desktop-layout {
   @media (min-width: $break-desktop) {
     @content;

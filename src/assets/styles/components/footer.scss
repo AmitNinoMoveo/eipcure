@@ -1,0 +1,21 @@
+@import '../global-style/styles.scss';
+
+footer {
+  height: $footer-h;
+  padding: 1rem;
+  width: 100%;
+  @include flexCenterAlignStretch();
+  align-items: stretch;
+
+  ul {
+    width: 100%;
+    @include flexWrap();
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    li {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+  }
+}

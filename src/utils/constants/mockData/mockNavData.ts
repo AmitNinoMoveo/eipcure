@@ -27,3 +27,29 @@ export const mockNavMainItems: navItem[] = [
     route: "chefs",
   },
 ];
+
+export const mockNavFooterItems: navItem[] = [
+  {
+    name: "Contact Us",
+    route: "contact",
+  },
+  {
+    name: "Terms of Use",
+    route: "terms",
+  },
+  {
+    name: "Privacy Policy",
+    route: "privacy",
+  },
+];
+
+export const mockHomePageMobileNavItems: navItem[] = [
+  {
+    name: "Chefs",
+    route: "chefs",
+  },
+  {
+    name: "Restaurants",
+    route: "restaurants",
+  },
+];
