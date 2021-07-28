@@ -1,5 +1,6 @@
 import { getRandomNum } from "../../functions/functions";
 import Restaurant from "../../interfaces/data/restaurant";
+import dishPics from "../dishPics";
 import mockChefsData from "./mockChefsData";
 import MockDishStageCategory from "./mockDishStageCategoryData";
 
@@ -16,7 +17,7 @@ const mockRestaurantsData: Restaurant[] = [
         dishes:[
             {
                id: 1,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -24,7 +25,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 2,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -32,7 +33,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 3,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -40,7 +41,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 4,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -48,7 +49,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 5,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -56,7 +57,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 6,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -76,7 +77,7 @@ const mockRestaurantsData: Restaurant[] = [
         dishes:[
             {
                id: 1,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -84,7 +85,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 2,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -92,7 +93,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 3,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -100,7 +101,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 4,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -108,7 +109,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 5,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -116,7 +117,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 6,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -136,7 +137,7 @@ const mockRestaurantsData: Restaurant[] = [
         dishes:[
             {
                id: 1,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -144,7 +145,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 2,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -152,7 +153,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 3,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -160,7 +161,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 4,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Pad Ki Mao',
                ingredients:  'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -168,7 +169,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 5,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Ta Ma-La-Ko',
                ingredients:  'Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],
@@ -176,7 +177,7 @@ const mockRestaurantsData: Restaurant[] = [
             },
             {
                id: 6,
-               picture: '',
+               picture: dishPics[getRandomNum(4)],
                name: 'Red Farm',
                ingredients:  'Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori',
                dishStageCategory: MockDishStageCategory[getRandomNum(3, 1)],

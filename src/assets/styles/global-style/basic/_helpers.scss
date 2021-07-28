@@ -67,6 +67,10 @@
   justify-content: flex-end;
 }
 
+.self-start {
+  align-self: flex-start;
+}
+
 .text-center {
   text-align: center;
 }
@@ -117,4 +121,8 @@
 
 .errors {
   color: red;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
 }

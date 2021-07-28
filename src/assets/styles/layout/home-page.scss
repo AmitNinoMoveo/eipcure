@@ -1,9 +1,11 @@
-@import '../global-style/styles.scss';
+@import "../global-style/styles.scss";
 
-main{
-    width: 100%;
+main {
+  width: 100%;
 
-    @include flexAlignCenter();
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
 }

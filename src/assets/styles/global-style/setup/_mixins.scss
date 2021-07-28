@@ -1,26 +1,33 @@
-@mixin flexCenter{
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-@mixin flexCenterAlignStretch{
-  display:flex;
+@mixin flexCenterAlignStretch {
+  display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
 }
 
-@mixin flexAlignCenter{
+@mixin flexAlignCenter {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-@mixin flexWrap{
+@mixin flexWrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+@mixin titleLarge {
+  font-size: $font-huge-size;
+  font-family: "Primary-Bold";
+  letter-spacing: 0.2rem;
+  text-align: center;
 }
 
 /* Media queries Breakpoint mixins */
