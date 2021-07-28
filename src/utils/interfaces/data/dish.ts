@@ -6,5 +6,8 @@ export default interface Dish{
     picture: string
     dishStageCategory: DishStageCategory,
     ingredients: string,
+    isSpicy: boolean,
+    isVegan: boolean,
+    isVegiterian: boolean,
     price: number
 };

@@ -6,6 +6,7 @@ import HeroComponent from "../components/home-page/Hero";
 import IconDictionaryComponent from "../components/home-page/IconDictionary";
 import MobileNavComponent from "../components/home-page/MobileNav";
 import PopularRestaurantsComponent from "../components/home-page/PopularRestaurants";
+import SigantureDishComponent from "../components/home-page/SigantureDish";
 import { RootState } from "../state/store";
 
 const HomePageComponent = () => {
@@ -21,6 +22,7 @@ const HomePageComponent = () => {
       <HeroComponent />
       <MobileNav />
       <PopularRestaurantsComponent />
+      <SigantureDishComponent />
       <IconDictionaryComponent />
       <ChefOfTheWeekComponent />
     </main>
