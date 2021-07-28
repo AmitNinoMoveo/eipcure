@@ -6,7 +6,7 @@ export default interface Restaurant{
     id: number,
     name: string,
     stats: RestaurantStats
-    chef: Chef,
+    chef: string,
     dishes: Dish[],
     isOpen: boolean
 }
