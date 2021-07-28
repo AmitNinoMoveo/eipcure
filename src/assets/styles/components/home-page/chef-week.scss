@@ -33,7 +33,6 @@
         
         h2{
             @include flexCenter();
-            @include titleLarge();
             color: $app-color-black;
             background-color: $white-80;
             width: 100%;

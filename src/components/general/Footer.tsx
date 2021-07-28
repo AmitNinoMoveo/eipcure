@@ -1,4 +1,4 @@
-import '../../assets/styles/components/footer.scss';
+import '../../assets/styles/components/general/footer.scss';
 import React from 'react';
 import { mockNavFooterItems } from '../../utils/constants/navData';
 import NavLinks from './NavLinks';

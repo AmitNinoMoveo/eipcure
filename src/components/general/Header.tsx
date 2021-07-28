@@ -1,4 +1,4 @@
-import "../../assets/styles/components/header.scss";
+import "../../assets/styles/components/general/header.scss";
 import React from "react";
 import MenuIcon from "../../assets/images/icons/menu-logo.svg";
 import DishesIcon from "../../assets/images/icons/dishes-icon.png";

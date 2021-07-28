@@ -1,4 +1,4 @@
-import '../../assets/styles/components/carousel.scss';
+import '../../assets/styles/components/general/carousel.scss';
 import React, { FC } from 'react';
 
 const CarouselComponent: FC= ({children}) => {
