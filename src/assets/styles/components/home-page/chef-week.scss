@@ -33,10 +33,7 @@
         
         h2{
             @include flexCenter();
-            font-size: $font-huge-size;
-            font-family: 'Primary-Bold';
-            letter-spacing: .2rem;
-            text-align: center;
+            @include titleLarge();
             color: $app-color-black;
             background-color: $white-80;
             width: 100%;
