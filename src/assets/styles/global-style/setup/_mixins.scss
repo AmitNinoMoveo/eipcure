@@ -23,13 +23,6 @@
   flex-wrap: wrap;
 }
 
-@mixin titleLarge {
-  font-size: $font-huge-size;
-  font-family: "Primary-Bold";
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
 /* Media queries Breakpoint mixins */
 @mixin for-desktop-layout {
   @media (min-width: $break-desktop) {

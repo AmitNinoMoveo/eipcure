@@ -1,17 +1,41 @@
-@import '../global-style/styles.scss';
+@import "../global-style/styles.scss";
 
-.card-container{
-    @include flexAlignCenter();
-    flex-direction: column;
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $sand-20;
+
+  h2 {
+    margin-top: 2rem;
+    font-size: $font-large-size;
+    font-family: "Primary-Bold";
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    color: $app-color-black;
+  }
+
+  :hover{
+      cursor: pointer;
+  }
+}
+
+.small {
+  width: 15rem;
+  height: 23rem;
+
+  img {
+    height: 15rem;
+  }
+}
+
+.medium {
     
-
-    .small{
-        width: 15rem;
-        height: 23rem;
-
-        h2{
-            @include titleLarge();
-        }
-    }
-
 }

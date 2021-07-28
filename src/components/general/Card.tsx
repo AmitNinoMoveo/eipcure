@@ -22,7 +22,6 @@ const CardComponent: FC<CardProps> = (props: CardProps) => {
 
   return (
     <div
-      id={props.id.toString()}
       className={`card-container ${props.type} ${
         props.carousel && "carousel-card"
       }`}

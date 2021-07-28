@@ -17,7 +17,7 @@ const ChefOfTheWeekComponent = () => {
       className="chef-portrait"
       style={{ backgroundImage: `url(${chef.picture})` }}
     >
-      <h2>{chef.chefName}</h2>
+      <h2 className="title-large" >{chef.chefName}</h2>
     </div>
   );
 
