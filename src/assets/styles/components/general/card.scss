@@ -1,4 +1,4 @@
-@import "../global-style/styles.scss";
+@import "../../global-style/styles.scss";
 
 .card-container {
   display: flex;
@@ -7,8 +7,7 @@
   background-color: $sand-20;
 
   h2 {
-    margin-top: 2rem;
-    font-size: $font-large-size;
+    font-size: $font-huge-size;
     font-family: "Primary-Bold";
     letter-spacing: 0.2rem;
     text-align: center;
@@ -16,14 +15,15 @@
 
   img {
     width: 100%;
+    margin-bottom: 1.8rem;
   }
 
   h2 {
     color: $app-color-black;
   }
 
-  :hover{
-      cursor: pointer;
+  :hover {
+    cursor: pointer;
   }
 }
 
@@ -37,5 +37,18 @@
 }
 
 .medium {
-    
+  width: 20.5rem;
+  height: 34rem;
+
+  img {
+    height: 22.5rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: $font-large-size;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

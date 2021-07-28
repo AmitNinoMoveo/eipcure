@@ -1,4 +1,4 @@
-import "../../assets/styles/components/search.scss";
+import "../../assets/styles/components/general/search.scss";
 import React, { FC } from "react";
 import magnifyingGlassIcon from "../../assets/images/icons/magnifying-glass.svg";
 
