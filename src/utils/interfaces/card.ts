@@ -1,5 +1,7 @@
+import IconNameProps from "./iconDictionaryItem"
+
 type Card = {
-    id : number
+    id : string
     type: string
     carousel: boolean,
     title: string,
@@ -15,7 +17,7 @@ type MediumCard = Card & {
 type LargeCard = Card & {
     type: 'large'
     discription: string,
-    icon: string,
+    icons: IconNameProps[],
     price: number
 }
 

@@ -1,3 +1,3 @@
 export default interface DishStageCategory{
-    [id: number]: 'Breakfast' | 'Launch' | 'Dinner'
+    [id: string]: 'Breakfast' | 'Launch' | 'Dinner'
 }

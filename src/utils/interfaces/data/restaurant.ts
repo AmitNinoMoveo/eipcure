@@ -1,12 +1,16 @@
-import Chef from "./chef";
 import Dish from "./dish";
-import RestaurantStats from "./restaurantStats";
-
-export default interface Restaurant{
-    id: number,
+export interface PartialRestaurant{
+    id: string,
     name: string,
-    stats: RestaurantStats
     chef: string,
+    picture: string
+};
+export interface RestaurantStats {
+    publishedAt: Date,
+    numOfLikes: number
+};
+export interface FullRestaurant extends PartialRestaurant{
+    stats: RestaurantStats,
     dishes: Dish[],
     isOpen: boolean
-}
+};

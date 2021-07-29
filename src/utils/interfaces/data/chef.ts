@@ -1,3 +1,3 @@
 export default interface Chef{
-    [id: number]: string
+    [id: string]: string
 }

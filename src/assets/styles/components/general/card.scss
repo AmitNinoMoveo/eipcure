@@ -2,28 +2,41 @@
 
 .card-container {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-color: $sand-20;
 
-  h2 {
-    font-size: $font-huge-size;
-    font-family: "Primary-Bold";
-    letter-spacing: 0.2rem;
-    text-align: center;
-  }
-
-  img {
+  #image {
     width: 100%;
-    margin-bottom: 1.8rem;
-  }
-
-  h2 {
-    color: $app-color-black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   :hover {
     cursor: pointer;
+  }
+
+  .card-text-box {
+    @include flexAlignCenter();
+    flex-direction: column;
+
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.4rem;
+
+    h2 {
+      font-size: $font-huge-size;
+      font-family: "Primary-Bold";
+      line-height: 1;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      color: $app-color-black;
+    }
+
+    h3 {
+      text-align: center;
+    }
   }
 }
 
@@ -31,7 +44,7 @@
   width: 15rem;
   height: 23rem;
 
-  img {
+  #image {
     height: 15rem;
   }
 }
@@ -40,15 +53,59 @@
   width: 20.5rem;
   height: 34rem;
 
-  img {
+  #image {
     height: 22.5rem;
   }
 
-  h3 {
-    margin-top: 2rem;
-    font-size: $font-large-size;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .card-text-box {
+    height: 8rem;
+    justify-content: space-between;
+
+    h3 {
+      font-size: $font-large-size;
+    }
+  }
+}
+
+.large {
+  width: 26rem;
+  height: 46rem;
+
+  color: $app-color-black;
+
+  #image {
+    height: 20rem;
+  }
+
+  .card-text-box {
+    height: 24rem;
+    justify-content: space-between;
+
+    p {
+      font-size: $font-large-size;
+      text-align: center;
+    }
+
+    .icons-container {
+      @include flexAlignCenter();
+      justify-content: space-evenly;
+      .icon {
+        height: 3.2rem;
+      }
+    }
+
+  }
+  .price-container{
+    width: 100%;
+    @include flexAlignCenter();
+    justify-content: space-between;
+    .line{
+      width: 35%;
+      height: 1px;
+      border-bottom: 1px solid rgba($brown-grey, 0.2);
+    } 
+    #price{
+      font-family: 'Primary-Bold';
+    }
   }
 }

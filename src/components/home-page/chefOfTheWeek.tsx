@@ -1,13 +1,12 @@
-import "../../assets/styles/components/home-page/chef-week.scss";
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../state/store";
-import CarouselComponent from "../general/Carousel";
-import CardComponent from "../general/Card";
+import "../../assets/styles/components/home-page/chef-week.scss";
 import { useAppSelector } from "../../state/hooks";
+import { RootState } from "../../state/store";
+import CardComponent from "../general/Card";
+import CarouselComponent from "../general/Carousel";
 
 const ChefOfTheWeekComponent = () => {
-  const chef = useSelector((state: RootState) => state.data.chefWeek);
+  const chef = useAppSelector((state) => state.homePage.chefWeek);
   const displaySize = useAppSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );

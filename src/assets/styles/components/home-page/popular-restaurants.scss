@@ -1,6 +1,11 @@
 @import '../../global-style/styles.scss';
 
 .popular-restaurants-container{
-    padding: 2rem;
-
+    margin-top: 2.5rem;
+    @include flexAlignCenter();
+    flex-direction: column;
+    justify-content: flex-start;
+    h2{
+        text-align: center;
+    }
 }
