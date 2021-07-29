@@ -1,14 +1,12 @@
-import "../../assets/styles/components/home-page/popular-restaurants.scss";
 import React from "react";
-import CarouselComponent from "../general/Carousel";
-import { useSelector } from "react-redux";
-import { RootState } from "../../state/store";
+import "../../assets/styles/components/home-page/popular-restaurants.scss";
+import { useAppSelector } from "../../state/hooks";
 import CardComponent from "../general/Card";
+import CarouselComponent from "../general/Carousel";
 
 const PopularRestaurantsComponent = () => {
-  const restaurants = useSelector((state: RootState) => state.homePage.popularRestaurants);
-  const displaySize = useSelector(
-    (state: RootState) => state.generalUISettings.displaySize
+  const restaurants = useAppSelector((state) => state.homePage.popularRestaurants);
+  const displaySize = useAppSelector((state) => state.generalUISettings.displaySize
   );
 
   const Cards = () => (

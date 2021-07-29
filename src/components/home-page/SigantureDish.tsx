@@ -1,13 +1,13 @@
-import "../../assets/styles/components/home-page/signature-dish.scss";
 import React from "react";
-import { useSelector } from "react-redux";
+import "../../assets/styles/components/home-page/signature-dish.scss";
+import { useAppSelector } from "../../state/hooks";
 import { RootState } from "../../state/store";
 import CardComponent from "../general/Card";
 import CarouselComponent from "../general/Carousel";
 
 const SigantureDishComponent = () => {
-  const dishes = useSelector((state: RootState) => state.homePage.signatureDish);
-  const displaySize = useSelector(
+  const dishes = useAppSelector((state: RootState) => state.homePage.signatureDish);
+  const displaySize = useAppSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );
 
