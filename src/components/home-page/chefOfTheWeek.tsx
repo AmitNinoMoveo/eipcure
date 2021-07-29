@@ -7,7 +7,7 @@ import CardComponent from "../general/Card";
 import { useAppSelector } from "../../state/hooks";
 
 const ChefOfTheWeekComponent = () => {
-  const chef = useSelector((state: RootState) => state.data.chefWeek);
+  const chef = useSelector((state: RootState) => state.homePage.chefWeek);
   const displaySize = useAppSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );

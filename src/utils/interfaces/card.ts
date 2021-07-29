@@ -1,7 +1,7 @@
 import IconNameProps from "./iconDictionaryItem"
 
 type Card = {
-    id : number
+    id : string
     type: string
     carousel: boolean,
     title: string,

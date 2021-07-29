@@ -1,14 +1,16 @@
-import ChefWeek, { ChefWeekRestaurant } from "../../interfaces/data/chefWeek";
 import mockChefsData from "./mockChefsData";
 import ChefPortraitImg from "../../../assets/images/pictures/yossi-shitrit-portrait.png";
 import mockRestaurantsData from "./mockRestaurantsData";
+import { ChefWeek } from "../../../features/home-page/interface";
+import { PartialRestaurant } from "../../interfaces/data/restaurant";
 
-const mockChefWeekRestaurantData: ChefWeekRestaurant[] =
+const mockChefWeekRestaurantsData: PartialRestaurant[] =
   mockRestaurantsData.map((restaurant) => {
-    const chefWeekRestaurant: ChefWeekRestaurant = {
+    const chefWeekRestaurant: PartialRestaurant = {
       id: restaurant.id,
       name: restaurant.name,
-      picture: restaurant.dishes[0].picture,
+      picture: restaurant.picture,
+      chef: restaurant.chef
     };
     return chefWeekRestaurant;
   });
@@ -18,7 +20,7 @@ const mockChefWeekData: ChefWeek = {
   description: `Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including  running the kitchen in his first restaurant, the fondly-remembered  Violet, located in Moshav Udim.  Shitrit's creativity and culinary acumen  born of long experience are expressed in the every detail of each and 
     every dish.`,
   picture: ChefPortraitImg,
-  restaurants: mockChefWeekRestaurantData,
+  restaurants: mockChefWeekRestaurantsData,
 };
 
 export default mockChefWeekData;

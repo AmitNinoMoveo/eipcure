@@ -1,10 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import dataReducer from "./dataReducer";
 import generalUISettingsReducer from "./generalUISettings";
+import HomePageReducer from "./homePageReducer";
 
 const rootReducer = combineReducers({
     generalUISettings: generalUISettingsReducer,
-    data: dataReducer
+    homePage: HomePageReducer,
 });
 
 export default rootReducer;

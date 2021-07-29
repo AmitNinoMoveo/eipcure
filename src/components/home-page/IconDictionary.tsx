@@ -22,7 +22,7 @@ const IconDictionaryComponent = () => {
 
     return (
         <section className="home-icon-dictioanry-container">
-            <h2>THE MEANING OF OUR ICONS :</h2>
+            <h2 className="text-uppercase" >The meaning of our icons:</h2>
             <IconsContainer />
         </section>
     )

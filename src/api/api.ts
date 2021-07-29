@@ -1,6 +1,7 @@
 import axios from "axios";
-
-
 const apiUrl = '';
+const get = async ()=> axios.get(apiUrl)
 
-export const get = ()=> axios.get(apiUrl);
+const api = { get };
+
+export default api;

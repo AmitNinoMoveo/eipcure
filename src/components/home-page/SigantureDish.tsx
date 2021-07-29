@@ -6,14 +6,14 @@ import CardComponent from "../general/Card";
 import CarouselComponent from "../general/Carousel";
 
 const SigantureDishComponent = () => {
-  const restaurants = useSelector((state: RootState) => state.data.restaurants);
+  const dishes = useSelector((state: RootState) => state.homePage.signatureDish);
   const displaySize = useSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );
 
   const Cards = () => (
     <>
-      {restaurants.map((restaurant, i) => {
+      {dishes.map((dish, i) => {
         const {
           id,
           picture,
@@ -21,7 +21,7 @@ const SigantureDishComponent = () => {
           name,
           icons,
           price
-        }= restaurant.dishes[0];
+        }= dish;
         return(
         <CardComponent
           key={i}

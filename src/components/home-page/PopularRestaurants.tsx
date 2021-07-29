@@ -6,7 +6,7 @@ import { RootState } from "../../state/store";
 import CardComponent from "../general/Card";
 
 const PopularRestaurantsComponent = () => {
-  const restaurants = useSelector((state: RootState) => state.data.restaurants);
+  const restaurants = useSelector((state: RootState) => state.homePage.popularRestaurants);
   const displaySize = useSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );
@@ -19,7 +19,7 @@ const PopularRestaurantsComponent = () => {
           type="medium"
           carousel={displaySize !== "web"}
           id={restaurant.id}
-          picture={restaurant.dishes[0].picture}
+          picture={restaurant.picture}
           title={restaurant.name}
           subTitle={restaurant.chef}
         />

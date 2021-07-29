@@ -1,19 +1,16 @@
 
-import "./assets/styles/layout/app.scss";
 import React, { useEffect } from "react";
+import "./assets/styles/layout/app.scss";
+import { getHomePageDataAction } from "./features/home-page/actions";
 import NavigationComponent from "./navigation/navigation";
-import { setChefWeek, setRestaurants } from "./state/reducers/dataReducer";
-import { useDispatch } from "react-redux";
-import mockChefWeekData from "./utils/constants/mockData/mockChefWeekData";
-import mockRestaurantsData from "./utils/constants/mockData/mockRestaurantsData";
+import { useAppDispatch } from "./state/hooks";
 
 function App() {
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(()=>{
-    dispatch(setChefWeek(mockChefWeekData));
-    dispatch(setRestaurants(mockRestaurantsData));
+    dispatch(getHomePageDataAction())
     // eslint-disable-next-line
   },[]);
 

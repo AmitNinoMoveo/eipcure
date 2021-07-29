@@ -1,13 +1,13 @@
+import IconNameProps from "../iconDictionaryItem";
 import DishStageCategory from "./dishStageCategory";
 
 export default interface Dish{
-    id: number,
+    id: string,
     name: string,
-    picture: string
+    picture: string,
+    restaurant: {id: string, name: string}
     dishStageCategory: DishStageCategory,
     ingredients: string,
-    isSpicy: boolean,
-    isVegan: boolean,
-    isVegiterian: boolean,
+    icons:IconNameProps[]
     price: number
 };
