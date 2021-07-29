@@ -19,6 +19,7 @@ const SigantureDishComponent = () => {
           picture,
           ingredients,
           name,
+          icons,
           price
         }= restaurant.dishes[0];
         return(
@@ -30,7 +31,7 @@ const SigantureDishComponent = () => {
           picture={picture}
           title={name}
           discription={ingredients}
-          icon=''
+          icons={icons}
           price={price}
         />)
       })}

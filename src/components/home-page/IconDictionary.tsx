@@ -1,7 +1,7 @@
 import "../../assets/styles/components/home-page/icon-dictionary.scss";
 import React, { FC } from 'react';
 import IconNameProps from "../../utils/interfaces/iconDictionaryItem";
-import iconsDictionaryData from "../../utils/constants/iconsDictionaryData";
+import mockIconsDictionaryData from "../../utils/constants/mockData/mockIconsDictionaryData";
 
 const IconDictionaryComponent = () => {
 
@@ -15,7 +15,7 @@ const IconDictionaryComponent = () => {
     const IconsContainer = ()=>(
         <div className="icons-container">
             {
-                iconsDictionaryData.map((iconItem: IconNameProps, i)=><IconName key={i}  name={iconItem.name} icon={iconItem.icon} />)
+                mockIconsDictionaryData.map((iconItem: IconNameProps, i)=><IconName key={i}  name={iconItem.name} icon={iconItem.icon} />)
             }
         </div>
     )

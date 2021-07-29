@@ -1,6 +1,7 @@
 @import '../../global-style/styles.scss';
 
 .home-icon-dictioanry-container{
+    margin-top: 8rem;
     @include flexCenter();
     padding: 1rem 2.2rem;
     width: 100%;

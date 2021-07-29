@@ -1,6 +1,7 @@
 @import '../../global-style/styles.scss';
 
 .chef-week-container{
+    margin-top: 6rem;
     @include flexCenter();
     flex-direction: column;
     padding: 2.2rem;
