@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
-import "./assets/styles/layout/app.scss";
-import { getHomePageDataAction } from "./features/home-page/actions";
+import "./App.scss";
+import { getHomePageDataAction } from "./features/home-page/state/actions";
 import NavigationComponent from "./navigation/navigation";
 import { useAppDispatch } from "./state/hooks";
 

@@ -1,0 +1,26 @@
+@import "../assets/styles/global-style/styles.scss";
+
+.icon {
+  margin: 0 1rem;
+}
+
+.field{
+
+  width: 95%;
+  padding: .5rem .8rem;
+  border: .15rem solid $search-bar-border-color;
+  border-radius: 5px;
+
+  img{
+    height: 1.5rem;
+  }
+  input{
+    width: 90%;
+    color: rgba($app-color-text, 0.2);
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+

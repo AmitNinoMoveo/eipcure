@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import FooterComponent from "../components/general/Footer";
-import Header from "../components/general/Header";
+import FooterComponent from "../components/Footer";
+import Header from "../components/Header";
 import HomePageComponent from "../features/home-page/HomePage";
 import Restaurants from "../features/restaurants/Restaurants";
 
