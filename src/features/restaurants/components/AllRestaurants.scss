@@ -1,0 +1,22 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.all-restaurants-container{
+    width: 100%;
+
+    @include flexAlignCenter();
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .card-container.medium{
+
+        margin-top: 1rem;
+        width: 16rem;
+        height: 19rem;
+
+        img{
+            height: 12rem;
+        }
+    }
+}

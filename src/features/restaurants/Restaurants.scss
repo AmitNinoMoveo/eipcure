@@ -1,0 +1,15 @@
+@import '../../assets/styles/global-style/styles.scss';
+
+.restaurants-page-container {
+  width: 100%;
+
+  section.heading {
+    text-align: center;
+    color: $app-color-black;
+  }
+
+  @include flexAlignCenter();
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
