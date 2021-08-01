@@ -1,0 +1,48 @@
+@import "../../global-style/styles.scss";
+
+.about-container {
+  @include flexAlignCenter();
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem 1.5rem;
+
+  background-color: $sand-10;
+
+  p.about-text {
+    width: 80%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  #logo {
+    width: 14rem;
+    height: 13rem;
+  }
+
+  .app-download-container {
+    @include flexAlignCenter();
+    justify-content: space-between;
+    width: 26rem;
+
+
+    .store {
+      width: 12.5rem;
+      height: 3.5rem;
+
+      border: 0.1rem solid black;
+      border-radius: 0.7rem;
+      padding: 0.5rem;
+
+      @include flexAlignCenter();
+      justify-content: space-around;
+      line-height: 1;
+
+      font-family: "Primary-Bold";
+      text-align: center;
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/styles/layout/home-page.scss";
+import AboutUs from "../../components/home-page/AboutUs";
 import ChefOfTheWeekComponent from "../../components/home-page/chefOfTheWeek";
 import HeroComponent from "../../components/home-page/Hero";
 import IconDictionaryComponent from "../../components/home-page/IconDictionary";
@@ -25,6 +26,7 @@ const HomePageComponent = () => {
       <SigantureDishComponent />
       <IconDictionaryComponent />
       <ChefOfTheWeekComponent />
+      <AboutUs />
     </main>
   );
 };
