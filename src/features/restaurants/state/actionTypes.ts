@@ -1,8 +1,11 @@
+import { createAction } from "@reduxjs/toolkit";
+import { SliceNames } from "../../../state/names";
+import { PartialRestaurant } from "../../../utils/interfaces/data/restaurant";
+
 export enum RestaurantsPageActionNames {
-  RESTAURANTS_GET_ALL  = 'RESTAURANTS_GET_ALL',
-  RESTAURANTS_GET_NEW  = 'RESTAURANTS_GET_NEW',
-  RESTAURANTS_GET_POPULAR  = 'RESTAURANTS_GET_POPULAR',
-  RESTAURANTS_GET_OPEN  = 'RESTAURANTS_GET_OPEN',
-  RESTAURANTS_SET_FILTER = 'RESTAURANTS_SET_FILTER',
-  
+  SET_DATA = 'SET_DATA',
+  SET_FILTER = 'SET_FILTER',
 }
+
+export const restaurantsSetDataAction = createAction<PartialRestaurant[]>(`${SliceNames.RESTAURANTS_PAGE}/${RestaurantsPageActionNames.SET_DATA}`);
+export const restaurantsSetFilterAction = createAction<PartialRestaurant[]>(`${SliceNames.RESTAURANTS_PAGE}/${RestaurantsPageActionNames.SET_FILTER}`);

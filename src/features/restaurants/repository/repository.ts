@@ -30,3 +30,10 @@ export const openRestaurantsRepo = async () => {
   const openRestaurants = mockRestaurantsData.filter(({ isOpen }) => isOpen);
   return mapRestaurantsArr(openRestaurants);
 };
+
+export type restaurantsRepoTypes = 
+  | typeof allRestaurantsRepo
+  | typeof newRestaurantsRepo
+  | typeof popularRestaurantsRepo
+  | typeof openRestaurantsRepo
+;

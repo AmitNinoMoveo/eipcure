@@ -1,8 +1,9 @@
-import "./AllFilters.scss";
 import React from "react";
+import SingleFilter, { FilterProps } from "../../../components/SingleFilter";
 import { useAppDispatch } from "../../../state/hooks";
-import { getAllRestaurantsDataAction, getNewRestaurantsDataAction, getOpenRestaurantsDataAction, getPopularRestaurantsDataAction } from "../state/actions";
-import SingleFilter, { FilterProps } from "./SingleFilter";
+import { allRestaurantsRepo, newRestaurantsRepo, openRestaurantsRepo, popularRestaurantsRepo } from "../repository/repository";
+import { getRestaurantAction } from "../state/actions";
+import "./AllFilters.scss";
 
 const AllFilters = () => {
   const dispatch = useAppDispatch();
@@ -11,37 +12,37 @@ const AllFilters = () => {
     {
       text: "All",
       type: "all",
-      cb: () => {
-        dispatch(getAllRestaurantsDataAction());
+      onClick: () => {
+        dispatch(getRestaurantAction(allRestaurantsRepo));
       },
     },
     {
       text: "New",
       type: "new",
-      cb: () => {
-        dispatch(getNewRestaurantsDataAction());
+      onClick: () => {
+        dispatch(getRestaurantAction(newRestaurantsRepo));
       },
     },
     {
       text: "Most Popular",
       type: "popular",
-      cb: () => {
-        dispatch(getPopularRestaurantsDataAction());
+      onClick: () => {
+        dispatch(getRestaurantAction(popularRestaurantsRepo));
       },
     },
     {
       text: "Open",
       type: "open",
-      cb: () => {
-        dispatch(getOpenRestaurantsDataAction());
+      onClick: () => {
+        dispatch(getRestaurantAction(openRestaurantsRepo));
       },
     },
   ];
 
   return (
     <section className="s-mt all-filters-container">
-      {filters.map(({ text, type, cb }: FilterProps) => (
-        <SingleFilter text={text} type={type} cb={cb} />
+      {filters.map(({ text, type, onClick }, i) => (
+        <SingleFilter key={i} text={text} type={type} onClick={onClick} />
       ))}
     </section>
   );

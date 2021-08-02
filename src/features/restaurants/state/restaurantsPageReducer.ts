@@ -1,16 +1,12 @@
 import {
   ActionReducerMapBuilder,
   createSlice,
-  PayloadAction,
+  PayloadAction
 } from "@reduxjs/toolkit";
 import { SliceNames } from "../../../state/names";
+import { isFulfilled, isPending } from "../../../utils/constants/reducerActionMatchers";
 import { PartialRestaurant } from "../../../utils/interfaces/data/restaurant";
-import {
-  getAllRestaurantsDataAction,
-  getNewRestaurantsDataAction,
-  getOpenRestaurantsDataAction,
-  getPopularRestaurantsDataAction,
-} from "./actions";
+import { getRestaurantAction } from "./actions";
 
 export type filter = "all" | "new" | "popular" | "open";
 
@@ -26,36 +22,19 @@ const initialState: RestaurantsPage = {
   restaurants: [],
 };
 
-const restaurantsBuilder = (
+const restaurantsExtraReducers = (
   builder: ActionReducerMapBuilder<RestaurantsPage>
 ) => {
-  builder.addCase(getAllRestaurantsDataAction.pending, (state) => {
-    state.isLoading = !state.isLoading;
-  });
-  builder.addCase(getNewRestaurantsDataAction.pending, (state) => {
-    state.isLoading = !state.isLoading;
-  });
-  builder.addCase(getPopularRestaurantsDataAction.pending, (state) => {
-    state.isLoading = !state.isLoading;
-  });
-  builder.addCase(getOpenRestaurantsDataAction.pending, (state) => {
-    state.isLoading = !state.isLoading;
-  });
-  builder.addCase(getAllRestaurantsDataAction.fulfilled, (state, action) => {
-    state.restaurants = action.payload;
-  });
-  builder.addCase(getNewRestaurantsDataAction.fulfilled, (state, action) => {
-    state.restaurants = action.payload;
-  });
-  builder.addCase(
-    getPopularRestaurantsDataAction.fulfilled,
-    (state, action) => {
-      state.restaurants = action.payload;
-    }
-  );
-  builder.addCase(getOpenRestaurantsDataAction.fulfilled, (state, action) => {
-    state.restaurants = action.payload;
-  });
+  builder
+    .addCase(getRestaurantAction.fulfilled, (state, {payload}:PayloadAction<PartialRestaurant[]>) => {
+      state.restaurants = payload;
+    })
+    .addMatcher(isPending, (state) => {
+      state.isLoading = true;
+    })
+    .addMatcher(isFulfilled, (state) => {
+      state.isLoading = false;
+    });
 };
 
 const restaurantsPageSlice = createSlice({
@@ -75,7 +54,7 @@ const restaurantsPageSlice = createSlice({
       state.restaurants = payload;
     },
   },
-  extraReducers: restaurantsBuilder,
+  extraReducers: restaurantsExtraReducers,
 });
 
 const RestaurantsPageReducer = restaurantsPageSlice.reducer;
