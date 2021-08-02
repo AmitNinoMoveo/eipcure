@@ -1,6 +1,6 @@
 import { ActionReducerMapBuilder, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getHomePageDataAction } from "../../features/home-page/actions";
-import { ChefWeek } from "../../features/home-page/interface";
+import { getHomePageDataAction } from "../../features/home-page/state/actions";
+import { ChefWeek } from "../../features/home-page/interfaces/interface";
 import Dish from "../../utils/interfaces/data/dish";
 import { PartialRestaurant } from "../../utils/interfaces/data/restaurant";
 import { SliceNames } from "../names";

@@ -1,0 +1,14 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.signature-dish-container{
+    margin-top: 4rem;
+    @include flexAlignCenter();
+    flex-direction: column;
+    justify-content: flex-start;
+    h3{
+        margin-top: 1.8rem;
+        font-family: 'Primary-Bold';
+        font-size: $font-large-size;
+        color: $app-color-black;
+    }
+}

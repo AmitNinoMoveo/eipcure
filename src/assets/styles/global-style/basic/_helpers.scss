@@ -123,8 +123,16 @@
   color: red;
 }
 
+.s-mt{
+  margin-top: $spacing-small;
+}
+
 .text-uppercase{
   text-transform: uppercase;
+}
+
+.text-bold{
+  font-family: 'Primary-Bold';
 }
 
 .title-large {
@@ -132,4 +140,11 @@
   font-family: "Primary-Bold";
   letter-spacing: 0.2rem;
   text-align: center;
+}
+
+.text-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
 }

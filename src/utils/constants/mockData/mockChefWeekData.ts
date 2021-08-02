@@ -1,7 +1,7 @@
 import mockChefsData from "./mockChefsData";
 import ChefPortraitImg from "../../../assets/images/pictures/yossi-shitrit-portrait.png";
 import mockRestaurantsData from "./mockRestaurantsData";
-import { ChefWeek } from "../../../features/home-page/interface";
+import { ChefWeek } from "../../../features/home-page/interfaces/interface";
 import { PartialRestaurant } from "../../interfaces/data/restaurant";
 
 const mockChefWeekRestaurantsData: PartialRestaurant[] =

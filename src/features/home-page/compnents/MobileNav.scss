@@ -1,0 +1,24 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.home-mobile-nav {
+
+    background-color: $sand-10;
+    padding: 2.2rem 0;
+
+  ul {
+
+    width: 100%;
+    @include flexAlignCenter();
+    justify-content: space-evenly;
+
+    li {
+        color: $app-color-black;
+        font-family: 'Primary-Bold';
+        background-color: $sand-80;
+        font-size: $font-medium-size;
+        padding: 1.1rem 1.7rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+  }
+}

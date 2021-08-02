@@ -1,0 +1,9 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.all-filters-container{
+
+    @include flexAlignCenter();
+    justify-content: space-around;
+
+    color: $app-color-black;
+}

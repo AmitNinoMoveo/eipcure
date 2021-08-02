@@ -1,13 +1,14 @@
 import React from "react";
-import "../../assets/styles/layout/home-page.scss";
-import ChefOfTheWeekComponent from "../../components/home-page/chefOfTheWeek";
-import HeroComponent from "../../components/home-page/Hero";
-import IconDictionaryComponent from "../../components/home-page/IconDictionary";
-import MobileNavComponent from "../../components/home-page/MobileNav";
-import PopularRestaurantsComponent from "../../components/home-page/PopularRestaurants";
-import SigantureDishComponent from "../../components/home-page/SigantureDish";
+import "./HomePage.scss";
 import { useAppSelector } from "../../state/hooks";
 import { RootState } from "../../state/store";
+import AboutUs from "./compnents/AboutUs";
+import ChefOfTheWeekComponent from "./compnents/ChefOfTheWeek";
+import HeroComponent from "./compnents/Hero";
+import IconDictionaryComponent from "./compnents/IconDictionary";
+import MobileNavComponent from "./compnents/MobileNav";
+import PopularRestaurantsComponent from "./compnents/PopularRestaurants";
+import SigantureDishComponent from "./compnents/SigantureDish";
 
 const HomePageComponent = () => {
 
@@ -25,6 +26,7 @@ const HomePageComponent = () => {
       <SigantureDishComponent />
       <IconDictionaryComponent />
       <ChefOfTheWeekComponent />
+      <AboutUs />
     </main>
   );
 };
