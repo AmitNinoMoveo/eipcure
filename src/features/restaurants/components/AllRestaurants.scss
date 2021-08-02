@@ -2,12 +2,12 @@
 
 .all-restaurants-container{
     width: 100%;
+    padding: 1.5rem;
 
     @include flexAlignCenter();
     
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-content: flex-start;
 
     .card-container.medium{
 
@@ -15,8 +15,19 @@
         width: 16rem;
         height: 19rem;
 
-        img{
+        #image{
             height: 12rem;
+        }
+
+        .card-text-box{
+            height: 8.5rem;
+
+            h2{
+                font-size: $font-large-size;
+            }
+            h3{
+                font-size: $font-medium-size;
+            }
         }
     }
 }

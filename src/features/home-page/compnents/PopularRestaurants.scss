@@ -1,11 +1,34 @@
-@import '../../../assets/styles/global-style/styles.scss';
+@import "../../../assets/styles/global-style/styles.scss";
 
-.popular-restaurants-container{
-    margin-top: 2.5rem;
-    @include flexAlignCenter();
-    flex-direction: column;
-    justify-content: flex-start;
-    h2{
-        text-align: center;
+.popular-restaurants-container {
+  margin-top: 2.5rem;
+  @include flexAlignCenter();
+  flex-direction: column;
+  justify-content: flex-start;
+  h2 {
+    text-align: center;
+  }
+
+  .card-container.medium {
+
+    width: 20.5rem;
+    height: 34rem;
+
+    #image {
+      height: 22.5rem;
     }
+
+    .card-text-box{
+      height: 9rem;
+
+
+      h2 {
+        font-size: $font-huge-size;
+      }
+      h3 {
+        font-size: $font-large-size;
+      }
+    }
+
+  }
 }
