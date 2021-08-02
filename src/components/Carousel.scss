@@ -10,6 +10,10 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
 
+  scroll-snap-destination: 0 0;
+  scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory;
+
   ::-webkit-scrollbar {
     display: none;
   }

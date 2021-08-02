@@ -16,6 +16,7 @@ body {
 main {
   height: calc(100vh - calc(#{$header-h} + #{$footer-h}));
   overflow-y: auto;
+  box-shadow: $shadow-small;
 }
 
 section{
