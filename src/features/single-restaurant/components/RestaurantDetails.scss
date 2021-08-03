@@ -1,0 +1,44 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.single-restaurant-details-container{
+    
+    @include flexAlignCenter();
+    flex-direction: column;
+    justify-content: flex-start;
+
+    color: $app-color-black;
+    text-align: center;
+    
+    .image{
+        height: 25rem;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    h3{
+        font-size: $font-huge-size;
+    }
+
+    .is-open-container{
+
+        @include flexCenter();
+        height: 2.5rem;
+
+        color: $app-color-text;
+
+        p{
+            font-size: $font-medium-size;
+            margin-left: .5rem;
+        }
+        img{
+            height: 1rem;
+            transform: translateY(-0.2rem);
+        }
+    }
+}

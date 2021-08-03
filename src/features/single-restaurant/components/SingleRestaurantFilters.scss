@@ -1,0 +1,14 @@
+@import '../../../assets/styles/global-style/styles.scss';
+
+.single-restaurant-filters-container{
+    
+    height: 3rem;
+    @include flexAlignCenter();
+    justify-content: space-evenly;
+    padding: 0 15%;
+    color: $app-color-black;
+    
+    .filter-btn.active{
+        border-bottom: .2rem solid $pumpkin-90;
+    }
+}

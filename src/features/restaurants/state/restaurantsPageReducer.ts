@@ -1,3 +1,4 @@
+
 import {
   ActionReducerMapBuilder,
   createSlice,
@@ -6,13 +7,12 @@ import {
 import { SliceNames } from "../../../state/names";
 import { isFulfilled, isPending } from "../../../utils/constants/reducerActionMatchers";
 import { PartialRestaurant } from "../../../utils/interfaces/data/restaurant";
+import { AllRestaurantsFilter } from "../utils/contstants";
 import { getRestaurantAction } from "./actions";
-
-export type filter = "all" | "new" | "popular" | "open";
 
 export interface RestaurantsPage {
   isLoading: boolean;
-  filterState: filter;
+  filterState: AllRestaurantsFilter;
   restaurants: PartialRestaurant[];
 }
 
@@ -44,7 +44,7 @@ const restaurantsPageSlice = createSlice({
     toggleRestaurantsLoading: (state) => {
       state.isLoading = !state.isLoading;
     },
-    setFilterType: (state, { payload }: PayloadAction<filter>) => {
+    setFilterType: (state, { payload }: PayloadAction<AllRestaurantsFilter>) => {
       state.filterState = payload;
     },
     setRestaurants: (

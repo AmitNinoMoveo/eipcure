@@ -6,4 +6,8 @@
     justify-content: space-around;
 
     color: $app-color-black;
+
+    .filter-btn.active{
+        font-family: 'Primary-Bold';
+    }
 }
