@@ -38,7 +38,7 @@ const SingleResaurantFilters = () => {
   ];
 
   return (
-    <section className="single-restaurant-filters-container">
+    <section className="single-restaurant-filters-container m-mt">
       {filters.map(({ text, type, onClick }, i) => (
         <SingleFilter key={i} text={text} type={type} onClick={onClick} filterState={filterState} />
       ))}
