@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import CardComponent from "../../../components/Card";
 import { useAppSelector } from "../../../state/hooks";
 import "./AllDishes.scss";
@@ -10,7 +10,7 @@ const Dishes = () => {
   );
 
   return (
-    <section className="single-restaurant-dishes-container">
+    <section className="single-restaurant-dishes-container m-mt">
       {dishes.map(({id, picture, price, icons, ingredients, name }, i) => (
         <CardComponent
         key={i}
@@ -28,4 +28,6 @@ const Dishes = () => {
   );
 };
 
-export default Dishes;
+const AllDishes: FC = ()=><Dishes />;
+
+export default AllDishes;
