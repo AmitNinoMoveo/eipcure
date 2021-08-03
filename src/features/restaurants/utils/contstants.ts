@@ -1,0 +1,1 @@
+export type AllRestaurantsFilter = "all" | "new" | "popular" | "open";

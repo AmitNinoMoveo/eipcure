@@ -4,6 +4,7 @@ import FooterComponent from "../components/Footer";
 import Header from "../components/Header";
 import HomePageComponent from "../features/home-page/HomePage";
 import Restaurants from "../features/restaurants/Restaurants";
+import SingleRestaurant from "../features/single-restaurant/SingleRestaurant";
 
 const NavigationComponent = () => (
   <BrowserRouter>
@@ -11,6 +12,9 @@ const NavigationComponent = () => (
     <Switch>
       <Route path="/restaurants">
         <Restaurants />
+      </Route>
+      <Route path="/:id">
+        <SingleRestaurant />
       </Route>
       <Route path="/">
         <HomePageComponent />

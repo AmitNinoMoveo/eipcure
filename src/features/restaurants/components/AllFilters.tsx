@@ -1,8 +1,10 @@
 import React from "react";
-import SingleFilter, { FilterProps } from "../../../components/SingleFilter";
+import SingleFilter from "../../../components/SingleFilter";
 import { useAppDispatch } from "../../../state/hooks";
+import FilterProps from "../../../utils/interfaces/filter";
 import { allRestaurantsRepo, newRestaurantsRepo, openRestaurantsRepo, popularRestaurantsRepo } from "../repository/repository";
 import { getRestaurantAction } from "../state/actions";
+import { setFilterType } from "../state/restaurantsPageReducer";
 import "./AllFilters.scss";
 
 const AllFilters = () => {
@@ -13,6 +15,7 @@ const AllFilters = () => {
       text: "All",
       type: "all",
       onClick: () => {
+        dispatch(setFilterType('all'))
         dispatch(getRestaurantAction(allRestaurantsRepo));
       },
     },
@@ -20,6 +23,7 @@ const AllFilters = () => {
       text: "New",
       type: "new",
       onClick: () => {
+        dispatch(setFilterType('new'))
         dispatch(getRestaurantAction(newRestaurantsRepo));
       },
     },
@@ -27,6 +31,7 @@ const AllFilters = () => {
       text: "Most Popular",
       type: "popular",
       onClick: () => {
+        dispatch(setFilterType('popular'))
         dispatch(getRestaurantAction(popularRestaurantsRepo));
       },
     },
@@ -34,6 +39,7 @@ const AllFilters = () => {
       text: "Open",
       type: "open",
       onClick: () => {
+        dispatch(setFilterType('open'))
         dispatch(getRestaurantAction(openRestaurantsRepo));
       },
     },
