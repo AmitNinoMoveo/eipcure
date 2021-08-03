@@ -1,6 +1,6 @@
 import React from "react";
 import SingleFilter from "../../../components/SingleFilter";
-import { useAppDispatch } from "../../../state/hooks";
+import { useAppDispatch, useAppSelector } from "../../../state/hooks";
 import FilterProps from "../../../utils/interfaces/filter";
 import { allRestaurantsRepo, newRestaurantsRepo, openRestaurantsRepo, popularRestaurantsRepo } from "../repository/repository";
 import { getRestaurantAction } from "../state/actions";
@@ -9,6 +9,7 @@ import "./AllFilters.scss";
 
 const AllFilters = () => {
   const dispatch = useAppDispatch();
+  const filterState = useAppSelector(state=>state.restaurantsPage.filterState);
 
   const filters: FilterProps[] = [
     {
@@ -48,7 +49,7 @@ const AllFilters = () => {
   return (
     <section className="s-mt all-filters-container">
       {filters.map(({ text, type, onClick }, i) => (
-        <SingleFilter key={i} text={text} type={type} onClick={onClick} />
+        <SingleFilter key={i} text={text} type={type} onClick={onClick} filterState={filterState}/>
       ))}
     </section>
   );

@@ -11,11 +11,11 @@ const RestaurantDetails = () => {
   return (
     <section className="single-restaurant-details-container">
       <div className="image" style={{ backgroundImage: `url(${picture})`}}/>
-      <h2>{name}</h2>
+      <h2 className="m-mt text-bold">{name}</h2>
       <h3>{chef}</h3>
-      <div className="is-open-container">
-        <p>{isOpen ? "Open Now" : "Closed"}</p>
+      <div className="is-open-container m-mt">
         <img src={ClockIcon} alt="open-closed" />
+        <p>{isOpen ? "Open now" : "Closed"}</p>
       </div>
     </section>
   );

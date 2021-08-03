@@ -18,6 +18,7 @@ const SingleRestaurant = () => {
 
   useEffect(()=>{
     dispatch(getRestaurantAction(id));
+    // eslint-disable-next-line
   },[])
 
   return (
