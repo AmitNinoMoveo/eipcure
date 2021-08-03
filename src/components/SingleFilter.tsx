@@ -1,14 +1,14 @@
-import './SingleFilter.scss';
 import React, { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../../../state/hooks";
-import { setFilterType } from "../state/restaurantsPageReducer";
+import { setFilterType } from "../features/restaurants/state/restaurantsPageReducer";
+import { useAppDispatch, useAppSelector } from "../state/hooks";
+import './SingleFilter.scss';
 
 export type FilterProps = {
     text: string;
     type: "all" | "new" | "popular" | "open";
-    cb: () => void;
+    onClick: () => void;
   };
-  const SingleFilter: FC<FilterProps> = ({ text, type, cb }: FilterProps) => {
+  const SingleFilter: FC<FilterProps> = ({ text, type, onClick }: FilterProps) => {
     const filterState = useAppSelector(
       (state) => state.restaurantsPage.filterState
     );
@@ -19,7 +19,7 @@ export type FilterProps = {
         className={`filter-btn ${filterState === type ? "text-bold" : ""}`}
         onClick={() =>{
           dispatch(setFilterType(type))
-          cb()
+          onClick()
         }}
       >
         {text}

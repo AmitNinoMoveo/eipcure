@@ -7,6 +7,9 @@
   flex-direction: column;
   background-color: $sand-20;
 
+  scroll-snap-align: start;
+  
+
   #image {
     width: 100%;
     background-size: cover;
@@ -19,6 +22,7 @@
   }
 
   .card-text-box {
+    width: 100%;
     @include flexAlignCenter();
     flex-direction: column;
 
@@ -27,7 +31,6 @@
 
     h2 {
       width: 90%;
-      font-size: $font-huge-size;
       font-family: "Primary-Bold";
       line-height: 1;
       letter-spacing: 0.2rem;
@@ -42,48 +45,20 @@
 }
 
 .small {
-  width: 15rem;
-  height: 23rem;
-
-  #image {
-    height: 15rem;
-  }
 }
 
 .medium {
-  width: 20.5rem;
-  height: 34rem;
-
-  #image {
-    height: 22.5rem;
-  }
-
   .card-text-box {
-    height: 8rem;
     justify-content: space-between;
-
-    h3 {
-      font-size: $font-large-size;
-    }
   }
 }
 
 .large {
-  width: 26rem;
-  height: 46rem;
-
   color: $app-color-black;
 
-  #image {
-    height: 20rem;
-  }
-
   .card-text-box {
-    height: 24rem;
     justify-content: space-between;
-
     p {
-      font-size: $font-large-size;
       text-align: center;
     }
 
@@ -94,19 +69,18 @@
         height: 3.2rem;
       }
     }
-
   }
-  .price-container{
+  .price-container {
     width: 100%;
     @include flexAlignCenter();
     justify-content: space-between;
-    .line{
+    .line {
       width: 35%;
       height: 1px;
       border-bottom: 1px solid rgba($brown-grey, 0.2);
-    } 
-    #price{
-      font-family: 'Primary-Bold';
+    }
+    #price {
+      font-family: "Primary-Bold";
     }
   }
 }

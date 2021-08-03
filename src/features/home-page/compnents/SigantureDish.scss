@@ -5,10 +5,35 @@
     @include flexAlignCenter();
     flex-direction: column;
     justify-content: flex-start;
+
+    padding-left: $padding-l;
+
     h3{
         margin-top: 1.8rem;
         font-family: 'Primary-Bold';
         font-size: $font-large-size;
         color: $app-color-black;
+    }
+
+    .card-container.large{
+
+        width: 26rem;
+        height: 46rem;
+
+        #image {
+            height: 20rem;
+          }
+
+        .card-text-box{
+            height: 24rem;
+
+            h2{
+                font-size: $font-huge-size;
+            }
+
+            p{
+                font-size: $font-large-size;
+            }
+        }
     }
 }

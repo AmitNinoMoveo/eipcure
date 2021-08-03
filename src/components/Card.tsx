@@ -29,10 +29,10 @@ const CardComponent: FC<CardProps> = (props: CardProps) => {
   );
 
   return (
-    <div className={getCardClassName()}>
+    <div className={getCardClassName()} >
       <div id="image" style={{ backgroundImage: `url(${props.picture})` }} />
       <div className="card-text-box">
-        <h2 className='text-ellipsis' >{props.title}</h2>
+        <h2 className='atext-ellipsis' >{props.title}</h2>
         {props.type === "medium" && <MediumCard />}
         {props.type === "large" && <LargeCard />}
       </div>

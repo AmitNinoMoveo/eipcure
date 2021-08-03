@@ -39,8 +39,9 @@ const DownloadAppBtn: FC<DownloadAppBtnProps> = ({
 
 const DownloadAppBtns = () => (
   <div className="app-download-container s-mt">
-    {downloadAppContent.map(({ icon, downloadTxt, appName, cb }) => (
+    {downloadAppContent.map(({ icon, downloadTxt, appName, cb }, i) => (
       <DownloadAppBtn
+      key={i}
         icon={icon}
         downloadTxt={downloadTxt}
         appName={appName}
