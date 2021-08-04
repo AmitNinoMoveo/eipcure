@@ -32,7 +32,7 @@ const PopularRestaurantsComponent = () => {
   );
 
   return (
-    <section className="popular-restaurants-container">
+    <section className="popular-restaurants-container inner-container">
       <h2 className="text-uppercase">The popular restaurants in epicure :</h2>
       {displaySize !== "web" ? <Carousel /> : <Cards />}
     </section>

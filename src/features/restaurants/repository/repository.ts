@@ -14,7 +14,7 @@ export const allRestaurantsRepo = async () => mapRestaurantsArr(mockRestaurantsD
 const openSinceInMs = 604800000; // Two weeks in milliseconds
 export const newRestaurantsRepo = async () => {
   const newRestaurants = mockRestaurantsData.filter(
-    ({ stats }) => stats.publishedAt > new Date(Date.now() - openSinceInMs)
+    ({ stats }) => new Date(stats.publishedAt) > new Date(Date.now() - openSinceInMs)
   );
   return mapRestaurantsArr(newRestaurants);
 };
