@@ -1,12 +1,13 @@
 import "./Card.scss";
 import React, { FC } from "react";
 import CardProps from "../utils/interfaces/card";
+import noChildrenProps from "../utils/interfaces/noChildrenComponent";
 
-const CardComponent: FC<CardProps> = (props: CardProps) => {
+const CardComponent: FC<CardProps & noChildrenProps> = (props: CardProps) => {
   const getCardClassName = () =>
     `card-container ${props.type} ${props.carousel && "carousel-card"}`;
 
-  const Icons = () => (
+  const Icons: FC<noChildrenProps> = () => (
     <div className="icons-container">
       {props.type === "large" &&
         props.icons.map((icon, i) => (
@@ -14,9 +15,8 @@ const CardComponent: FC<CardProps> = (props: CardProps) => {
         ))}
     </div>
   );
-
-  const MediumCard = () => <h3>{props.type === "medium" && props.subTitle}</h3>;
-  const LargeCard = () => (
+  const MediumCard: FC<noChildrenProps> = () => <h3>{props.type === "medium" && props.subTitle}</h3>;
+  const LargeCard: FC<noChildrenProps> = () => (
     <>
       <p>{props.type === "large" && props.discription}</p>
       <Icons />
@@ -30,6 +30,7 @@ const CardComponent: FC<CardProps> = (props: CardProps) => {
 
   return (
     <div className={getCardClassName()} >
+
       <div id="image" style={{ backgroundImage: `url(${props.picture})` }} />
       <div className="card-text-box">
         <h2 className='text-ellipsis' >{props.title}</h2>

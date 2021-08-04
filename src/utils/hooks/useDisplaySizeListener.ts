@@ -6,7 +6,7 @@ import {
 const useDisplaySizeListener = () => {
     const getSizeName = useCallback(
     (size: number): displaySizeNames =>
-    size < sizeNumberByName.MOBILE ? "mobile" : "web",
+    size < sizeNumberByName.WEB ? "mobile" : "web",
     []
   );
 

@@ -16,7 +16,7 @@ export const mockNavUserItems: navItem[] = [
 export const mockNavMainItems: navItem[] = [
   {
     name: "EPICURE",
-    route: "home",
+    route: "",
   },
   {
     name: "Restaurants",

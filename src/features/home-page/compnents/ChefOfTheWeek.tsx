@@ -1,17 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import "./ChefOfTheWeek.scss";
 import { useAppSelector } from "../../../state/hooks";
 import { RootState } from "../../../state/store";
 import CardComponent from "../../../components/Card";
 import CarouselComponent from "../../../components/Carousel";
+import noChildrenProps from "../../../utils/interfaces/noChildrenComponent";
 
-const ChefOfTheWeekComponent = () => {
+const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
   const chef = useAppSelector((state) => state.homePage.chefWeek);
   const displaySize = useAppSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );
 
-  const ChefPortrait = () => (
+  const ChefPortrait: FC<noChildrenProps> = () => (
     <div
       className="chef-portrait"
       style={{ backgroundImage: `url(${chef.picture})` }}
@@ -20,7 +21,7 @@ const ChefOfTheWeekComponent = () => {
     </div>
   );
 
-  const Carousel = () => (
+  const Carousel: FC<noChildrenProps> = () => (
     <CarouselComponent>
       {chef.restaurants.map((restaurant) => (
         <CardComponent
