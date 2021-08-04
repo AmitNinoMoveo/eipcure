@@ -9,18 +9,41 @@ html {
   font-size: 62.5%;  // 16px / 10px = 62.5%
 }
 
+@include for-tablet-layout{
+  html{
+    font-size: 81.25%;
+  }
+}
+@include for-desktop-layout{
+  html{
+    font-size: 93.75%;
+  }
+}
+
 body {
   margin: 0;
 }
 
 main {
   height: calc(100vh - calc(#{$header-h} + #{$footer-h}));
+  width: 100%;
   overflow-y: auto;
   box-shadow: $shadow-small;
 }
 
 section{
   width: 100%;
+}
+
+.inner-container{
+  width: 100%;
+}
+@include for-desktop-layout{
+  .inner-container{
+    margin: auto;
+    width: 90%;
+    max-width: $break-big-screen;
+  }
 }
 
 p,

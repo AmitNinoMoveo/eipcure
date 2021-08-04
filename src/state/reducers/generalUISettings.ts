@@ -1,15 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { SliceNames } from "../names";
 import GeneralUISettings from '../../utils/interfaces/generalUISettings';
+import { displaySizeNames } from "../../utils/constants/displaySizeNames";
 
-const initialState: GeneralUISettings = {displaySize: 'mobile'};
+const initialState: GeneralUISettings = {displaySize: 'web'};
 
 const generalUISettingsSlice = createSlice({
     name: SliceNames.GENERAL_UI_SETTINGS,
     initialState,
     reducers:{
-        setDisplaySizeState: (state, action: PayloadAction<GeneralUISettings>)=>{
-            state.displaySize = action.payload.displaySize;
+        setDisplaySizeState: (state, {payload}: PayloadAction<displaySizeNames>)=>{
+            state.displaySize = payload;
         },
     }
 });

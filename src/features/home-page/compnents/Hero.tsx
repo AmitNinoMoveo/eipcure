@@ -4,9 +4,10 @@ import HeroBackgroundImg from "../../../assets/images/pictures/hero-background.p
 import Search from "../../../components/Search";
 
 const HeroComponent = () => (
-    <section
-      style={{ backgroundImage: `url(${HeroBackgroundImg})`}}
-      className='home-hero-container'
+  <section>
+    <div
+      style={{ backgroundImage: `url(${HeroBackgroundImg})` }}
+      className="home-hero-container"
     >
       <div className="hero-box-container">
         <h1>Epicure works with the top chef restaurants in Tel Aviv</h1>
@@ -17,7 +18,8 @@ const HeroComponent = () => (
           type="field"
         />
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 
 export default HeroComponent;
