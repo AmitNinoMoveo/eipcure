@@ -8,12 +8,12 @@ import Dish from "../../interfaces/data/dish";
 const mockRestaurantsData: FullRestaurant[] = [
   {
     id: "1",
-    name: "Clara",
+    name: "Claro",
     picture: dishPics[getRandomNum(4)],
     chef: mockChefsData["5"],
     isOpen: true,
     stats: {
-      publishedAt: new Date(),
+      publishedAt: Date.now(),
       numOfLikes: 100,
     },
     dishes: generateDishesArray({ id: "1", name: "Clara" }),
@@ -25,7 +25,7 @@ const mockRestaurantsData: FullRestaurant[] = [
     chef: mockChefsData[`${getRandomNum(5, 1)}`],
     isOpen: true,
     stats: {
-      publishedAt: new Date(1626728400000),
+      publishedAt: 1626728400000,
       numOfLikes: 10,
     },
     dishes: generateDishesArray({ id: "2", name: "Breakfast at Nino's" }),
@@ -37,7 +37,7 @@ const mockRestaurantsData: FullRestaurant[] = [
     chef: mockChefsData[`${getRandomNum(5, 1)}`],
     isOpen: false,
     stats: {
-      publishedAt: new Date(1282424400000),
+      publishedAt: 1282424400000,
       numOfLikes: 70,
     },
     dishes: generateDishesArray({ id: "3", name: "Ochel" }),

@@ -1,4 +1,6 @@
+import { displaySizeNames } from "../constants/displaySizeNames";
+
 type GeneralUISettings = {
-    displaySize: 'mobile' | 'tablet' | 'web'
+    displaySize: displaySizeNames
 };
 export default GeneralUISettings;

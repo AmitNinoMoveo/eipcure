@@ -45,7 +45,7 @@ const SigantureDishComponent = () => {
   );
 
   return (
-    <section className="signature-dish-container">
+    <section className="signature-dish-container inner-container">
       <h2 className="text-uppercase">Signature dish of: </h2>
       <h3>Tiger Claw</h3>
       {displaySize !== "web" ? <Carousel /> : <Cards />}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import CardComponent from "../../../components/Card";
 import { useAppDispatch, useAppSelector } from "../../../state/hooks";
+import { PartialRestaurant } from '../../../utils/interfaces/data/restaurant';
 import { allRestaurantsRepo } from '../repository/repository';
 import { getRestaurantAction } from '../state/actions';
 import './AllRestaurants.scss';
@@ -20,7 +21,7 @@ const AllRestaurants = () => {
 
   return (
     <section className="s-mt all-restaurants-container">
-      {restaurants.map(({ id, chef, name, picture }) => (
+      {restaurants.map(({ id, chef, name, picture }: PartialRestaurant) => (
         <CardComponent
           key={id}
           type="medium"

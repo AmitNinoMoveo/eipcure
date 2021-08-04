@@ -4,16 +4,15 @@
     width: 100%;
     padding: 1.5rem;
 
-    @include flexAlignCenter();
-    
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 19rem ;
+    grid-gap: 2rem;
 
     .card-container.medium{
 
         margin-top: 1rem;
         width: 16rem;
-        height: 19rem;
 
         #image{
             height: 12rem;

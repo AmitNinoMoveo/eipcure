@@ -6,7 +6,7 @@ export interface PartialRestaurant{
     picture: string
 };
 export interface RestaurantStats {
-    publishedAt: Date,
+    publishedAt: number,
     numOfLikes: number
 };
 export interface FullRestaurant extends PartialRestaurant{

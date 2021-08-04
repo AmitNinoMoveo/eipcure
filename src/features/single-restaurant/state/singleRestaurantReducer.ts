@@ -23,7 +23,7 @@ const initialState: SingleRestaurantPage = {
     isOpen: false,
     stats: {
         numOfLikes: 0,
-        publishedAt: new Date()
+        publishedAt: Date.now()
     },
     dishes: []
 }
