@@ -2,11 +2,10 @@
 
 .single-restaurant-dishes-container{
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include grid(2, #{$spacing-small});
     grid-auto-rows: 26rem;
-    grid-gap: 2rem;
-    justify-content: space-between;
+
+    // justify-content: space-between;
     padding: 2rem;
     
     .card-container.large{

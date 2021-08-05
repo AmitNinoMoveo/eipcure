@@ -31,6 +31,7 @@ header{
 
 main {
   margin-top: $header-h;
+  min-height: calc(100vh - #{$header-h});
   width: 100%;
   box-shadow: $shadow-small;
 }

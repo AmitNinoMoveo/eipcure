@@ -159,7 +159,11 @@
 }
 
 .cards-container-web{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $spacing-small;
+  @include grid(3, #{$spacing-small});
+}
+
+// BACKGROUNDS
+
+.bgc-light{
+  background-color: $sand-10;
 }

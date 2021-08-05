@@ -17,7 +17,7 @@ const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
       className="chef-portrait"
       style={{ backgroundImage: `url(${chef.picture})` }}
     >
-      <h2 className="title-large" >{chef.chefName}</h2>
+      <h2 className="title-large">{chef.chefName}</h2>
     </div>
   );
 
@@ -36,13 +36,32 @@ const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
     </CarouselComponent>
   );
 
+  const CardsContainer: FC<noChildrenProps> = () => (
+    <div className="chef-week-card-container m-mt">
+      {chef.restaurants.slice(0, 3).map((restaurant) => (
+        <CardComponent
+          key={restaurant.id}
+          id={restaurant.id}
+          type="small"
+          title={restaurant.name}
+          carousel={true}
+          picture={restaurant.picture}
+        />
+      ))}
+    </div>
+  );
+
   return (
-    <section className="chef-week-container">
-      <h3 className="text-uppercase">chef of the week:</h3>
-      <ChefPortrait />
-      <p>{chef.description}</p>
-      <h3 className="self-start" >{chef.chefName}'s restaurants:</h3>
-      {displaySize !== "web" ? <Carousel /> : <></>}
+    <section className="m-mt">
+      <div className="chef-week-container inner-container">
+        <h3 className="text-uppercase">chef of the week:</h3>
+        <div className="picture-description-contianer">
+          <ChefPortrait />
+          <p>{chef.description}</p>
+        </div>
+        <h3 className="self-start">{chef.chefName}'s restaurants:</h3>
+        {displaySize !== "web" ? <Carousel /> : <CardsContainer />}
+      </div>
     </section>
   );
 };

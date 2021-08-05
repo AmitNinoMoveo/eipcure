@@ -41,7 +41,7 @@ const DownloadAppBtns = () => (
   <div className="app-download-container s-mt">
     {downloadAppContent.map(({ icon, downloadTxt, appName, cb }, i) => (
       <DownloadAppBtn
-      key={i}
+        key={i}
         icon={icon}
         downloadTxt={downloadTxt}
         appName={appName}
@@ -52,11 +52,15 @@ const DownloadAppBtns = () => (
 );
 
 const AboutUs = () => (
-  <section className="about-container">
-    <h2 className="text-uppercase">About Us:</h2>
-    <Text />
-    <DownloadAppBtns />
-    <img className="s-mt" id="logo" src={AboutLogo} alt="about" />
+  <section className="bgc-light m-mt">
+    <div className="about-container inner-container">
+      <div className="about-text-box">
+        <h2 className="text-uppercase">About Us:</h2>
+        <Text />
+        <DownloadAppBtns />
+      </div>
+      <img className="s-mt" id="logo" src={AboutLogo} alt="about" />
+    </div>
   </section>
 );
 

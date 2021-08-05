@@ -23,6 +23,12 @@
   flex-wrap: wrap;
 }
 
+@mixin grid($columnsNum, $gap){
+  display: grid;
+  grid-template-columns: repeat($columnsNum, 1fr);
+  grid-gap: $gap;
+}
+
 /* Media queries Breakpoint mixins */
 @mixin for-desktop-layout {
   @media (min-width: #{$break-desktop}) {
