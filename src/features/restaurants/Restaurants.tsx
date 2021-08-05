@@ -13,7 +13,7 @@ const Header = () => (
 const Restaurants = () => {
   const isLoading = useAppSelector((state) => state.restaurantsPage.isLoading);
   return (
-    <main className="s-mt restaurants-page-container">
+    <main className="restaurants-page-container">
       <Header />
       <AllFilters />
       {isLoading ? <h2>No Data</h2> : <AllRestaurants />}

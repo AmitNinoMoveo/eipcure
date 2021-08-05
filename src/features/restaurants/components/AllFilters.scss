@@ -4,10 +4,13 @@
 
     @include flexAlignCenter();
     justify-content: space-around;
+    width: 100%;
+    max-width: 55rem;
 
     color: $app-color-black;
 
     .filter-btn.active{
         font-family: 'Primary-Bold';
     }
+    
 }
