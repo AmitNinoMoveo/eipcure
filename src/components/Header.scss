@@ -43,10 +43,8 @@ header {
       }
     }
     .nav-right {
-      display: flex;
-      align-items: center;
+      @include flexAlignCenterNoWrap();
       justify-content: flex-end;
-      flex-wrap: nowrap;
       flex-grow: 1;
     }
   }

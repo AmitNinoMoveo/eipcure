@@ -17,6 +17,11 @@
   align-items: center;
   flex-wrap: wrap;
 }
+@mixin flexAlignCenterNoWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 @mixin flexWrap {
   display: flex;

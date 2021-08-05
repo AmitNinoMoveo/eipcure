@@ -1,46 +1,48 @@
-@import '../../../assets/styles/global-style/styles.scss';
+@import "../../../assets/styles/global-style/styles.scss";
 
-.single-restaurant-dishes-container{
+.single-restaurant-dishes-container {
+  @include grid(2, #{$spacing-small});
+  grid-auto-rows: 26rem;
+  padding: 2rem;
+  .card-container.large {
+    width: 100%;
 
-    @include grid(2, #{$spacing-small});
-    grid-auto-rows: 26rem;
+    @include flexAlignCenterNoWrap();
+    flex-direction: column;
+    justify-content: space-between;
 
-    // justify-content: space-between;
-    padding: 2rem;
-    
-    .card-container.large{
-        width: 100%;
+    #image {
+      width: 100%;
+      height: 10rem;
+    }
+    .card-text-box {
+      height: 14rem;
 
-        @include flexAlignCenter();
-        flex-direction: column;
-        justify-content: space-between;
-
-        #image{
-            width: 100%;
-            height: 10rem;
+      @include flexAlignCenterNoWrap();
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        font-size: $font-large-size;
+      }
+      h3 {
+        font-size: $font-medium-size;
+      }
+      .icons-container {
+        .icon {
+          height: 2.5rem;
         }
+      }
+    }
+  }
+}
 
-        .card-text-box{
-            height: 14rem;
+@include for-desktop-layout{
+    .single-restaurant-dishes-container{
+        grid-template-columns: repeat(4, 1fr);
 
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-
-            h2{
-                font-size: $font-large-size;
-            }
-            
-            h3{
-                font-size: $font-medium-size;
-            }
-
-            .icons-container{
-                .icon{
-                    height: 2.5rem;
-                }
+        .card-container.large{
+            .card-text-box{
+                height: 18rem;
             }
         }
     }
