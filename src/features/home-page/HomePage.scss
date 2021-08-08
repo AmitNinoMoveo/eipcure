@@ -1,9 +1,7 @@
 @import "../../assets/styles/global-style/styles.scss";
 
 main {
-  display: flex;
+  @include flexAlignCenterNoWrap();
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
 }

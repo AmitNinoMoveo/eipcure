@@ -8,8 +8,7 @@
     color: $app-color-black;
   }
 
-  @include flexAlignCenter();
+  @include flexAlignCenterNoWrap();
   flex-direction: column;
   justify-content: flex-start;
-  flex-wrap: nowrap;
 }

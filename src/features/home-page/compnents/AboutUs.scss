@@ -1,47 +1,72 @@
-@import '../../../assets/styles/global-style/styles.scss';
+@import "../../../assets/styles/global-style/styles.scss";
 
 .about-container {
+  width: 100%;
+
   @include flexAlignCenter();
   flex-direction: column;
   justify-content: space-evenly;
   padding: 3rem 1.5rem;
 
-  background-color: $sand-10;
+  .about-text-box {
+    width: 100%;
+    @include flexAlignCenter();
+    flex-direction: column;
+    justify-content: start;
 
-  p.about-text {
-    width: 80%;
-    text-align: center;
-    font-size: 1.4rem;
+    p.about-text {
+      width: 80%;
+      max-width: 36.5rem;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .app-download-container {
+      @include flexAlignCenter();
+      justify-content: space-between;
+      width: 26rem;
+
+      .store {
+        width: 12.5rem;
+        height: 3.5rem;
+
+        border: 0.1rem solid black;
+        border-radius: 0.7rem;
+        padding: 0.5rem;
+
+        @include flexAlignCenter();
+        justify-content: space-around;
+        line-height: 1;
+
+        font-family: "Primary-Bold";
+        text-align: center;
+
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 
   #logo {
     width: 14rem;
     height: 13rem;
   }
+}
 
-  .app-download-container {
-    @include flexAlignCenter();
-    justify-content: space-between;
-    width: 26rem;
-
-
-    .store {
-      width: 12.5rem;
-      height: 3.5rem;
-
-      border: 0.1rem solid black;
-      border-radius: 0.7rem;
-      padding: 0.5rem;
-
-      @include flexAlignCenter();
-      justify-content: space-around;
-      line-height: 1;
-
-      font-family: "Primary-Bold";
-      text-align: center;
-
-      span {
-        font-size: 0.9rem;
+@include for-desktop-layout {
+  section {
+    .about-container {
+      @include grid(2, #{$spacing-medium});
+      .about-text-box {
+        p.about-text {
+          text-align: start;
+          width: 100%;
+        }
+      } 
+      img#logo {
+        align-self: center;
+        margin: 0 auto;
       }
     }
   }

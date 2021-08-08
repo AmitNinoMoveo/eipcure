@@ -20,18 +20,20 @@ const AllRestaurants = () => {
   },[]);
 
   return (
-    <section className="s-mt all-restaurants-container">
-      {restaurants.map(({ id, chef, name, picture }: PartialRestaurant) => (
-        <CardComponent
-          key={id}
-          type="medium"
-          carousel={false}
-          id={id}
-          title={name}
-          subTitle={chef}
-          picture={picture}
-        />
-      ))}
+    <section className="s-mt">
+      <div className="all-restaurants-container inner-container">
+        {restaurants.map(({ id, chef, name, picture }: PartialRestaurant) => (
+          <CardComponent
+            key={id}
+            type="medium"
+            carousel={false}
+            id={id}
+            title={name}
+            subTitle={chef}
+            picture={picture}
+          />
+        ))}
+    </div>
     </section>
   );
 };

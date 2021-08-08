@@ -20,8 +20,11 @@ $app-color-text: grey;
 //border-color
 $search-bar-border-color: #c0c0c0;
 
-//bg-color
+//backgrounds
+$header-color: $app-color-white;
+$footer-color: $app-color-white;
 
+//bg-color
 //warning-color
 
 //title-color
@@ -36,10 +39,12 @@ $padding-l: 2rem;
 //SPACING
 $spacing-small: 1.7rem;
 $spacing-medium: 2.5rem;
+$spacing-large: 3.2rem;
 
 //SIZES
 $header-h: 5rem;
-$footer-h: 12.5rem;
+$footer-mobile-h: 12.5rem;
+$footer-desktop-h: 6rem;
 
 $font-huge-size: 2.2rem;
 $font-large-size: 1.6rem;

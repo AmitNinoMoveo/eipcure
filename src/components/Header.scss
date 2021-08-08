@@ -1,48 +1,78 @@
 @import "../assets/styles/global-style/styles.scss";
 
-header{
-    height: $header-h;
-    width: 100% ;
+header {
+  height: $header-h;
+  width: 100%;
 
+  z-index: 100;
+
+  background-color: #fff;
+
+  @include flexCenter();
+
+  padding: 0.5rem 2rem;
+
+  box-shadow: $shadow-small;
+
+  #dishes-icon {
+    height: 4.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  nav {
+    width: 100%;
+
+    @include flexAlignCenter();
+    justify-content: space-between;
+
+    .nav-left {
+      @include flexAlignCenter();
+      justify-content: flex-start;
+      flex-grow: 1;
+
+      ul {
+        font-size: $font-medium-size;
+      }
+      ul > li:first-of-type {
+        color: $app-color-black;
+        font-size: $font-large-size;
+        font-family: "Primary-Bold";
+      }
+    }
+    .nav-right {
+      @include flexAlignCenterNoWrap();
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+  }
+
+  ul {
+    margin: 0;
     @include flexCenter();
 
-    padding: .5rem 2rem;
-    position: relative;
-
-    box-shadow: $shadow-small;
-
-    #dishes-icon{
-        height: 4.5rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    li {
+      margin: 0 1rem;
     }
+  }
+}
 
-    nav{
-        width: 100%;
-
-        @include flexAlignCenter();
-        justify-content:space-between;
-        
-        .nav-left{
-            @include flexAlignCenter();
-            justify-content: flex-start;       
-            flex-grow: 1;
-        }
-        .nav-right{
-            @include flexAlignCenter();
-            justify-content: flex-end;       
-            flex-grow: 1;
-        }
+@include for-tablet-layout {
+  .nav-right {
+    ul {
+      flex-wrap: nowrap;
+      li{
+          img{
+              height: 1.4rem;
+          }
+      }
     }
-    
-    ul{
-        margin: 0;
-        @include flexCenter();
-        
-        li{
-            margin: 0 1rem;
-        }
+  }
+  .nav-left {
+    img {
+      height: 2.6rem;
     }
+  }
 }

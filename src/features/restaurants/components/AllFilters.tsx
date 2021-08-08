@@ -47,7 +47,7 @@ const AllFilters = () => {
   ];
 
   return (
-    <section className="s-mt all-filters-container">
+    <section className="m-mt all-filters-container ">
       {filters.map(({ text, type, onClick }, i) => (
         <SingleFilter key={i} text={text} type={type} onClick={onClick} filterState={filterState}/>
       ))}

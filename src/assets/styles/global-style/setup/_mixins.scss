@@ -17,10 +17,21 @@
   align-items: center;
   flex-wrap: wrap;
 }
+@mixin flexAlignCenterNoWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 @mixin flexWrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+@mixin grid($columnsNum, $gap){
+  display: grid;
+  grid-template-columns: repeat($columnsNum, 1fr);
+  grid-gap: $gap;
 }
 
 /* Media queries Breakpoint mixins */

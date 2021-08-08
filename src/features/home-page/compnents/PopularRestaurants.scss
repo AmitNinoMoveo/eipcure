@@ -22,8 +22,6 @@
 
     .card-text-box{
       height: 9rem;
-
-
       h2 {
         font-size: $font-huge-size;
       }
@@ -31,6 +29,19 @@
         font-size: $font-large-size;
       }
     }
+  }
 
+  .link{
+    color: $app-color-black;
+    font-family: 'Primary-Bold';
+    font-size: $font-large-size;
+    margin-left: auto;
+    text-transform: uppercase;
+  }
+}
+
+@include for-desktop-layout{
+  .popular-restaurants-container{
+    padding: 0;
   }
 }

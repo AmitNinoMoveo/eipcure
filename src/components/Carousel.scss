@@ -4,10 +4,8 @@
   padding: 2rem;
   width: 100%;
 
-  display: flex;
+  @include flexAlignCenterNoWrap();
   justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
   overflow-x: scroll;
 
   scroll-snap-destination: 0 0;
@@ -21,6 +19,10 @@
   scrollbar-width: none;
 
   .carousel-card {
+    flex-shrink: 0;
+    margin: 0 0.8rem 0 0;
+  }
+  .dish-card-container {
     flex-shrink: 0;
     margin: 0 0.8rem 0 0;
   }

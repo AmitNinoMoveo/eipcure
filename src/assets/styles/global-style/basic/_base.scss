@@ -24,10 +24,15 @@ body {
   margin: 0;
 }
 
+header{
+  position: fixed;
+  top: 0;
+}
+
 main {
-  height: calc(100vh - calc(#{$header-h} + #{$footer-h}));
+  margin-top: $header-h;
+  min-height: calc(100vh - #{$header-h});
   width: 100%;
-  overflow-y: auto;
   box-shadow: $shadow-small;
 }
 

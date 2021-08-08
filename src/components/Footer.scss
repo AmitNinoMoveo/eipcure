@@ -1,11 +1,12 @@
 @import "../assets/styles/global-style/styles.scss";
 
 footer {
-  height: $footer-h;
+  height: $footer-mobile-h;
   padding: 1rem;
   width: 100%;
   @include flexCenterAlignStretch();
   align-items: stretch;
+  background-color: $header-color;
 
   ul {
     width: 100%;
@@ -16,6 +17,16 @@ footer {
     li {
       text-align: center;
       margin: 0.5rem 0;
+    }
+  }
+}
+
+@include for-tablet-layout {
+  footer {
+    height: $footer-desktop-h;
+    ul {
+      flex-direction: row;
+      width: 60%;
     }
   }
 }
