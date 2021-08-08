@@ -3,7 +3,8 @@ import "./PopularRestaurants.scss";
 import { useAppSelector } from "../../../state/hooks";
 import CardComponent from "../../../components/Card";
 import CarouselComponent from "../../../components/Carousel";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { generateRestaurantPathName, onClickCard } from "../../../navigation/functions";
 
 const PopularRestaurantsComponent = () => {
   const restaurants = useAppSelector(
@@ -12,6 +13,8 @@ const PopularRestaurantsComponent = () => {
   const displaySize = useAppSelector(
     (state) => state.generalUISettings.displaySize
   );
+
+    const history = useHistory();
 
   const CarouselCards: FC = () => (
     <>
@@ -24,6 +27,7 @@ const PopularRestaurantsComponent = () => {
           picture={restaurant.picture}
           title={restaurant.name}
           subTitle={restaurant.chef}
+          onClick={()=>onClickCard(generateRestaurantPathName(restaurant.id), history)}
         />
       ))}
     </>
@@ -47,10 +51,11 @@ const PopularRestaurantsComponent = () => {
             picture={restaurant.picture}
             title={restaurant.name}
             subTitle={restaurant.chef}
+            onClick={()=>onClickCard(generateRestaurantPathName(restaurant.id), history)}
           />
         ))}
       </div>
-      <Link className="link m-mt" to="/restaurants">
+      <Link className="link m-mt" to="/restaurants/all">
         All restaurants &gt;&gt;{" "}
       </Link>
     </>

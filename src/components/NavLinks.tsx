@@ -10,7 +10,7 @@ const NavLinks: React.FC<navLinksProps> = ({ navItems }: navLinksProps) => (
   <ul>
     {navItems.map((navItem, i) => (
       <li key={i}>
-        <Link to={navItem.route}>
+        <Link to={'/'+navItem.route}>
           {navItem.name ? (
             navItem.name
           ) : navItem.icon ? (

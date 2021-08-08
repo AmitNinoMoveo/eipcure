@@ -4,8 +4,7 @@ import { restaurantsSetDataAction } from "./actionTypes";
 
 export const getRestaurantAction = createAsyncThunk(
 restaurantsSetDataAction.type,
-  async (command: restaurantsRepoTypes) => {
-    console.log('getRestaurantsAction called');
+  async (command: restaurantsRepoTypes) => { 
     const response = await command();
     return response;
   }

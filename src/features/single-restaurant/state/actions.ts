@@ -1,8 +1,23 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getRestaurantRepo } from "../repository/repository";
-import { getRestaurantActionType } from "./actionTypes";
+import {
+  getRestaurantInfoRepo,
+  getRetaurantDishesRepo,
+} from "../repository/repository";
+import singleDishFilter from "../utils/constants";
+import {
+  getRestaurantDishesActionType,
+  getRestaurantInfoActionType,
+} from "./actionTypes";
 
-export const getRestaurantAction = createAsyncThunk(
-    getRestaurantActionType.type,
-    async (id: string)=> await getRestaurantRepo(id)
+export const getRestaurantInfoAction = createAsyncThunk(
+  getRestaurantInfoActionType.type,
+  async (id: string) => await getRestaurantInfoRepo(id)
+);
+
+export const getRestaurantDishesAction = createAsyncThunk(
+  getRestaurantDishesActionType.type,
+  async ({id, type}:{id: string, type: singleDishFilter}) => {
+    const response = await getRetaurantDishesRepo(id, type);
+    return response;
+  }
 );

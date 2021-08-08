@@ -1,6 +1,8 @@
 import React, { FC } from "react";
+import { useHistory } from "react-router-dom";
 import CardComponent from "../../../components/Card";
 import CarouselComponent from "../../../components/Carousel";
+import { generateRestaurantPathName, onClickCard } from "../../../navigation/functions";
 import { useAppSelector } from "../../../state/hooks";
 import { RootState } from "../../../state/store";
 import Dish from "../../../utils/interfaces/data/dish";
@@ -20,15 +22,15 @@ const SigantureDishComponent = () => {
     dishes: Dish[];
   };
 
+  const history = useHistory();
+
   const Cards: FC<CardsProps & noChildrenProps> = ({ dishes }) => (
     <>
-      {dishes.map((dish, i) => {
-        const { id, picture, ingredients, name, icons, price,restaurant } = dish;
+      {dishes.map(({ id, picture, ingredients, name, icons, price, restaurant }: Dish, i) => {
         return (
-          <div className="dish-card-container">
+          <div key={i} className="dish-card-container">
             <h3>{restaurant.name}</h3>
             <CardComponent
-              key={i}
               type="large"
               carousel={displaySize !== "web"}
               id={id}
@@ -37,6 +39,7 @@ const SigantureDishComponent = () => {
               discription={ingredients}
               icons={icons}
               price={price}
+              onClick={()=>onClickCard(generateRestaurantPathName(restaurant.id), history)}
             />
           </div>
         );

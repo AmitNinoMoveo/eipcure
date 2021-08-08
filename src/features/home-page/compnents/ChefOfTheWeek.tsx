@@ -5,12 +5,16 @@ import { RootState } from "../../../state/store";
 import CardComponent from "../../../components/Card";
 import CarouselComponent from "../../../components/Carousel";
 import noChildrenProps from "../../../utils/interfaces/noChildrenComponent";
+import { useHistory } from "react-router-dom";
+import { generateRestaurantPathName, onClickCard } from "../../../navigation/functions";
 
 const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
   const chef = useAppSelector((state) => state.homePage.chefWeek);
   const displaySize = useAppSelector(
     (state: RootState) => state.generalUISettings.displaySize
   );
+
+  const history = useHistory();
 
   const ChefPortrait: FC<noChildrenProps> = () => (
     <div
@@ -31,6 +35,7 @@ const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
           title={restaurant.name}
           carousel={true}
           picture={restaurant.picture}
+          onClick={()=>onClickCard(generateRestaurantPathName(restaurant.id), history)}
         />
       ))}
     </CarouselComponent>
@@ -46,6 +51,7 @@ const ChefOfTheWeekComponent: FC<noChildrenProps> = () => {
           title={restaurant.name}
           carousel={true}
           picture={restaurant.picture}
+          onClick={()=>onClickCard(generateRestaurantPathName(restaurant.id), history)}
         />
       ))}
     </div>

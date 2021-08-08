@@ -14,10 +14,12 @@ function App() {
 
   useEffect(()=>{
     dispatch(getHomePageDataAction());
+    // eslint-disable-next-line
   },[]);
 
   useEffect(()=>{
     dispatch(setDisplaySizeState(displaySize));
+    // eslint-disable-next-line
   },[displaySize])
 
   return (

@@ -3,7 +3,7 @@
 .single-restaurant-dishes-container {
   @include grid(2, #{$spacing-small});
   grid-auto-rows: 26rem;
-  padding: 2rem;
+  
   .card-container.large {
     width: 100%;
 
