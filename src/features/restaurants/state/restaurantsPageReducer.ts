@@ -7,7 +7,7 @@ import {
 import { SliceNames } from "../../../state/names";
 import { isFulfilled, isPending } from "../../../utils/constants/reducerActionMatchers";
 import { PartialRestaurant } from "../../../utils/interfaces/data/restaurant";
-import { AllRestaurantsFilter } from "../utils/contstants";
+import { AllRestaurantsFilter } from "../utils/interface";
 import { getRestaurantAction } from "./actions";
 
 export interface RestaurantsPage {

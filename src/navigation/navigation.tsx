@@ -10,10 +10,10 @@ const NavigationComponent = () => (
   <BrowserRouter>
     <Header />
     <Switch>
-      <Route path="/restaurants">
+      <Route path="/restaurants/*">
         <Restaurants />
       </Route>
-      <Route path="/:id">
+      <Route path="/r/:id/*">
         <SingleRestaurant />
       </Route>
       <Route path="/">

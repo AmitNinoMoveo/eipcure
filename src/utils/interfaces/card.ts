@@ -5,7 +5,8 @@ type Card = {
     type: string
     carousel: boolean,
     title: string,
-    picture: string
+    picture: string,
+    onClick: ()=>void
 }
 type SmallCard = Card & {
     type: 'small'

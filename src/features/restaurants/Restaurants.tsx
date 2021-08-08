@@ -1,8 +1,8 @@
-import React from "react";
-import "./Restaurants.scss";
+import React, { FC } from "react";
+import noChildrenProps from "../../utils/interfaces/noChildrenComponent";
 import AllFilters from "./components/AllFilters";
-import AllRestaurants from "./components/AllRestaurants";
-import { useAppSelector } from "../../state/hooks";
+import RetstaurantsNav from "./navigation/RetstaurantsNav";
+import "./Restaurants.scss";
 
 const Header = () => (
   <section className="heading s-mt">
@@ -10,13 +10,12 @@ const Header = () => (
   </section>
 );
 
-const Restaurants = () => {
-  const isLoading = useAppSelector((state) => state.restaurantsPage.isLoading);
+const Restaurants: FC<noChildrenProps> = () => {
   return (
     <main className="restaurants-page-container">
       <Header />
       <AllFilters />
-      {isLoading ? <h2>No Data</h2> : <AllRestaurants />}
+      <RetstaurantsNav  />
     </main>
   );
 };

@@ -1,9 +1,12 @@
 import { getRandomNum } from "../../functions/functions";
-import { generateDish, generateDishesArray } from "../../functions/mockDataGenerators";
-import { FullRestaurant } from "../../interfaces/data/restaurant";
-import dishPics from "./mockDishPics";
-import mockChefsData from "./mockChefsData";
+import {
+  generateDish,
+  generateDishesArray
+} from "../../functions/mockDataGenerators";
 import Dish from "../../interfaces/data/dish";
+import { FullRestaurant } from "../../interfaces/data/restaurant";
+import mockChefsData from "./mockChefsData";
+import dishPics from "./mockDishPics";
 
 const mockRestaurantsData: FullRestaurant[] = [
   {
@@ -16,7 +19,7 @@ const mockRestaurantsData: FullRestaurant[] = [
       publishedAt: Date.now(),
       numOfLikes: 100,
     },
-    dishes: generateDishesArray({ id: "1", name: "Clara" }),
+    dishes: generateDishesArray({ id: "1", name: "Clara" })
   },
   {
     id: "2",
@@ -28,7 +31,7 @@ const mockRestaurantsData: FullRestaurant[] = [
       publishedAt: 1626728400000,
       numOfLikes: 10,
     },
-    dishes: generateDishesArray({ id: "2", name: "Breakfast at Nino's" }),
+    dishes: generateDishesArray({ id: "2", name: "Breakfast at Nino's" })
   },
   {
     id: "3",
@@ -40,7 +43,7 @@ const mockRestaurantsData: FullRestaurant[] = [
       publishedAt: 1282424400000,
       numOfLikes: 70,
     },
-    dishes: generateDishesArray({ id: "3", name: "Ochel" }),
+    dishes: generateDishesArray({ id: "3", name: "Ochel" })
   },
 ];
 
@@ -51,7 +54,7 @@ export const generateSignatureDishArray = () => {
   const signatureDishArray: Dish[] = [];
   for (let i = 0; i < restaurants.length; i++) {
     signatureDishArray.push(generateDish(`${i}`, restaurants[i]));
-  };
+  }
   return signatureDishArray;
 };
 

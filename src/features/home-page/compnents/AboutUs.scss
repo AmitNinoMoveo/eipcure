@@ -12,7 +12,7 @@
     width: 100%;
     @include flexAlignCenter();
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 
     p.about-text {
       width: 80%;
@@ -47,13 +47,11 @@
       }
     }
   }
-
   #logo {
     width: 14rem;
     height: 13rem;
   }
 }
-
 @include for-desktop-layout {
   section {
     .about-container {
@@ -63,7 +61,7 @@
           text-align: start;
           width: 100%;
         }
-      } 
+      }
       img#logo {
         align-self: center;
         margin: 0 auto;

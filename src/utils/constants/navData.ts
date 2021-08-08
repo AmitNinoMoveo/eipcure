@@ -20,7 +20,7 @@ export const mockNavMainItems: navItem[] = [
   },
   {
     name: "Restaurants",
-    route: "restaurants",
+    route: "restaurants/all",
   },
   {
     name: "Chefs",
@@ -50,6 +50,6 @@ export const mockHomePageMobileNavItems: navItem[] = [
   },
   {
     name: "Restaurants",
-    route: "restaurants",
+    route: "restaurants/all",
   },
 ];
